@@ -8,15 +8,6 @@ public class PhuongTrinhBac2 {
     public static void main(String[] args) {
         PhuongTrinhBac2 ptb2 = new PhuongTrinhBac2();
 
-        double a, b, c, x1, x2, delta;
-        Scanner Sc = new Scanner(System.in);
-        System.out.println("nhap vao so a");
-        a = Sc.nextInt();
-        System.out.println("nhap vao so b");
-        b = Sc.nextInt();
-        System.out.println("nhap vao so c");
-        c = Sc.nextInt();
-
         List<Double> heso = ptb2.nhapPhuongTrinhBac2(); // a = heso[0], b = heso[1], c = heso[2]
         List<Double> ketqua = ptb2.giaiPhuongTrinhBac2(heso.get(0), heso.get(1), heso.get(2));
 
@@ -26,10 +17,9 @@ public class PhuongTrinhBac2 {
             if (ketqua.isEmpty()) {
                 System.out.println("phuong trinh vo nghiem");
             } else if (ketqua.size() == 1) {
-                x1 = -b / (2 * a);
-                System.out.println("phuong trinh co nghiem kep x1 =x2" + x1);
+                System.out.println("phuong trinh co nghiem kep x1 = x2 = " + ketqua.get(0));
             } else {
-                System.out.println("phuong trinh co nghiem la");
+                System.out.println("phuong trinh co 2 nghiem la");
                 System.out.println("x1 = " + ketqua.get(0));
                 System.out.println("x2 = " + ketqua.get(1));
             }
