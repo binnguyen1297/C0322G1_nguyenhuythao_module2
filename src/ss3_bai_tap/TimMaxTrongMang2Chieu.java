@@ -8,11 +8,6 @@ public class TimMaxTrongMang2Chieu {
     public static void main(String[] args) {
         TimMaxTrongMang2Chieu tm2c = new TimMaxTrongMang2Chieu();
 
-//        double[][] dauvao = {
-//                {3, 4, 5},
-//                {9, 7, 9},
-//                {4, 9, 2}
-//        };
         double[][] dauvao = tm2c.nhapMang2Chieu();
         List<Double> ketqua = tm2c.timMaxTrrongMang2Chieu(dauvao);
         System.out.println("Max = " + ketqua.get(0));
