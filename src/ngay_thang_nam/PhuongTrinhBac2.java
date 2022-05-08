@@ -3,8 +3,11 @@ package ngay_thang_nam;
 import java.util.List;
 import java.util.Scanner;
 
-public class phuong_trinh_bac2 {
+public class PhuongTrinhBac2 {
+
     public static void main(String[] args) {
+        PhuongTrinhBac2 ptb2 = new PhuongTrinhBac2();
+
         double a, b, c, x1, x2, delta;
         Scanner Sc = new Scanner(System.in);
         System.out.println("nhap vao so a");
@@ -14,25 +17,36 @@ public class phuong_trinh_bac2 {
         System.out.println("nhap vao so c");
         c = Sc.nextInt();
 
-        delta = Math.pow(b, 2) - 4 * a * c;
+        List<Double> heso = ptb2.nhapPhuongTrinhBac2(); // a = heso[0], b = heso[1], c = heso[2]
+        List<Double> ketqua = ptb2.giaiPhuongTrinhBac2(heso.get(0), heso.get(1), heso.get(2));
 
-        if (a == 0) {
+        if (ketqua == null) {
             System.out.println("phuong trinh khong ton tai");
         } else {
-            if (delta < 0) {
+            if (ketqua.isEmpty()) {
                 System.out.println("phuong trinh vo nghiem");
-            } else if (delta == 0) {
+            } else if (ketqua.size() == 1) {
                 x1 = -b / (2 * a);
                 System.out.println("phuong trinh co nghiem kep x1 =x2" + x1);
-
             } else {
-                x1 = (-b - Math.sqrt(delta)) / (2 * a);
-                x2 = (-b + Math.sqrt(delta)) / (2 * a);
                 System.out.println("phuong trinh co nghiem la");
-                System.out.println("x1" + x1);
-                System.out.println("x2" + x2);
+                System.out.println("x1 = " + ketqua.get(0));
+                System.out.println("x2 = " + ketqua.get(1));
             }
         }
+    }
+
+    private List<Double> nhapPhuongTrinhBac2() {
+        double a, b, c, x1, x2;
+        Scanner Sc = new Scanner(System.in);
+        System.out.println("nhap vao so a");
+        a = Sc.nextInt();
+        System.out.println("nhap vao so b");
+        b = Sc.nextInt();
+        System.out.println("nhap vao so c");
+        c = Sc.nextInt();
+
+        return List.of(a, b, c);
     }
 
     private List<Double> giaiPhuongTrinhBac2(Double a, Double b, Double c) {
