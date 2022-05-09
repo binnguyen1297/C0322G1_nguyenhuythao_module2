@@ -1,5 +1,6 @@
 package ss3_bai_tap;
 
+import java.util.List;
 import java.util.Scanner;
 
 public class xoa__phan_tu_khoi_mang {
@@ -30,4 +31,5 @@ public class xoa__phan_tu_khoi_mang {
             System.out.print(A[i] + "\t");
         }
     }
+
 }
