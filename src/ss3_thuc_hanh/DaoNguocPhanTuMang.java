@@ -2,7 +2,7 @@ package ss3_thuc_hanh;
 
 import java.util.Scanner;
 
-public class Dao_Nguoc_Phan_Tu_Mang {
+public class DaoNguocPhanTuMang {
     public static void main(String[] args) {
         int size;
         int[] array;

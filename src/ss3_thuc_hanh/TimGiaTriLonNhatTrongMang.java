@@ -2,7 +2,7 @@ package ss3_thuc_hanh;
 
 import java.util.Scanner;
 
-public class tim_gia_tri_lon_nhat_trong_mang {
+public class TimGiaTriLonNhatTrongMang {
     public static void main(String[] args) {
         int size;
         int[] array;

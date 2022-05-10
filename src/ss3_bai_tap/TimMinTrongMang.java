@@ -2,7 +2,7 @@ package ss3_bai_tap;
 
 import java.util.Scanner;
 
-public class tim_min_trong_mang {
+public class TimMinTrongMang {
     public static void main(String[] args) {
         Scanner a = new Scanner(System.in);
         int[] arr = new int[10];

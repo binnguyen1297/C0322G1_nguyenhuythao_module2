@@ -2,7 +2,7 @@ package ss3_bai_tap;
 
 import java.util.Scanner;
 
-public class gopMang {
+public class GopMang {
     public static void main(String[] args) {
         Scanner x = new Scanner(System.in);
         int[] arr1 = new int[5];

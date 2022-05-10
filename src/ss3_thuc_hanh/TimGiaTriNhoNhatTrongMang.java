@@ -1,6 +1,6 @@
 package ss3_thuc_hanh;
 
-public class _tim_gia_tri_nho_nhat_trong_mang {
+public class TimGiaTriNhoNhatTrongMang {
     public static void main(String[] args) {
         int[] arr = {4, 12, 7, 25, 5, 6, 9};
         int index = minValue(arr);
