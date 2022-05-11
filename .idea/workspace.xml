@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="f255574f-0166-468f-8711-379711e5d3d7" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/ngay_thang_nam/game_xep_hinh.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ss5_bai_tap/AccessModifier.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ss5_bai_tap/MainStudent.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ss5_bai_tap/Student.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ss5_bai_tap/TestCircle.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ss5_thuc_hanh/MainStaticProperty.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ss5_thuc_hanh/StaticMethodAssignment.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ss5_thuc_hanh/StaticProperty.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ss5_thuc_hanh/TestStaticMethod.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ss6_bai_tap/AccessModifier.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ss6_bai_tap/AccessModifierTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ss6_bai_tap/StudentTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ss6_bai_tap/Students.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ss6_thuc_hanh/Circle.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ss6_thuc_hanh/CircleText.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ss6_thuc_hanh/Rectangle.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ss6_thuc_hanh/RectangleTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ss6_thuc_hanh/Shape.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ss6_thuc_hanh/ShapeTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ss6_thuc_hanh/Square.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ss6_thuc_hanh/SquareTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/C0322G1_nguyenhuythao_module2/ngay_thang_nam/TimMax.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/C0322G1_nguyenhuythao_module2/ss3_bai_tap/ThemPhanTuVaoMang.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/C0322G1_nguyenhuythao_module2/ss3_bai_tap/ThemPhanTuVaoMang.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ngay_thang_nam/TimMax.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ngay_thang_nam/TimMax.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ss4_bai_tap/MainStopWatch.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ss4_bai_tap/MainStopWatch.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ss4_bai_tap/QuadraticEquation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ss4_bai_tap/QuadraticEquation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ss4_bai_tap/StopWatch.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ss4_bai_tap/StopWatch.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="2901r3YkZoonYpgedZZRRw0vrVP" />
+  <component name="ProjectViewState">
+    <option name="flattenPackages" value="true" />
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$USER_HOME$" />
+    <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.javacompiler" />
+  </component>
+  <component name="RunManager" selected="Application.StudentTest">
+    <configuration name="AccessModifierTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ss6_bai_tap.AccessModifierTest" />
+      <module name="C0322G1_nguyenhuythao_module2" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ss6_bai_tap.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ShapeTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ss6_thuc_hanh.ShapeTest" />
+      <module name="C0322G1_nguyenhuythao_module2" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ss6_thuc_hanh.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SquareTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ss6_thuc_hanh.SquareTest" />
+      <module name="C0322G1_nguyenhuythao_module2" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ss6_thuc_hanh.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="StudentTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ss6_bai_tap.StudentTest" />
+      <module name="C0322G1_nguyenhuythao_module2" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ss6_bai_tap.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestCircle" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ss5_bai_tap.TestCircle" />
+      <module name="C0322G1_nguyenhuythao_module2" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ss5_bai_tap.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.StudentTest" />
+        <item itemvalue="Application.AccessModifierTest" />
+        <item itemvalue="Application.SquareTest" />
+        <item itemvalue="Application.ShapeTest" />
+        <item itemvalue="Application.TestCircle" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="f255574f-0166-468f-8711-379711e5d3d7" name="Changes" comment="" />
+      <created>1652235386970</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1652235386970</updated>
+      <workItem from="1652235389890" duration="13135000" />
+      <workItem from="1652278830654" duration="2082000" />
+      <workItem from="1652317827229" duration="4742000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/ss5_thuc_hanh/TestStaticMethod.java</url>
+          <line>2</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/ss5_bai_tap/AccessModifier.java</url>
+          <line>29</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>

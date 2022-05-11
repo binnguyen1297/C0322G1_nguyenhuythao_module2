@@ -1,45 +1,46 @@
 package ss4_bai_tap;
 
-import java.time.LocalTime;
 
 public class StopWatch {
-    private LocalTime startTime;
-    private LocalTime endTime;
+    private long startTime;
+    private long endTime;
 
     public StopWatch() {
     }
 
-    public StopWatch(LocalTime startTime, LocalTime endTime) {
+    public StopWatch(long startTime, long endTime) {
         this.startTime = startTime;
         this.endTime = endTime;
     }
 
-    public LocalTime getStartTime() {
+    public long getStartTime() {
         return startTime;
     }
 
-    public LocalTime getEndTime() {
+    public long getEndTime() {
         return endTime;
     }
-    public void setStartTime(LocalTime startTime) {
+
+    public void setStartTime(long startTime) {
         this.startTime = startTime;
     }
 
-    public void setEndTime(LocalTime endTime) {
+    public void setEndTime(long endTime) {
         this.endTime = endTime;
     }
-    public void start(){
-        startTime = LocalTime.now();
+
+    public long start() {
+        return  startTime = System.currentTimeMillis();
     }
 
-    public void end(){
-        endTime = LocalTime.now();
+    public long end() {
+        return  endTime = System.currentTimeMillis();
     }
 
-    public int getElapsedTime() {
-        int milisecond = ((endTime.getHour() - startTime.getHour()) * 3600 +
-                (endTime.getMinute() - startTime.getMinute()) * 60 +
-                (endTime.getSecond() - startTime.getSecond())) * 1000;
-        return milisecond;
+    public long getElapsedTime() {
+
+        return endTime -  startTime;
     }
+
+
 }

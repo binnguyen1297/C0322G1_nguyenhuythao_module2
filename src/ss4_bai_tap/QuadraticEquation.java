@@ -20,7 +20,7 @@ public class QuadraticEquation {
     }
 
     public double getRoot1() {
-        return ((-b + Math.sqrt(this.getDiscriminant()))) / 2 * a;
+        return ((-b + Math.sqrt(getDiscriminant()))) / 2 * a;
     }
 
     public double getRoot() {
