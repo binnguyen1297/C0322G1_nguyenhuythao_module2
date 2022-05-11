@@ -21,6 +21,7 @@ public class StopWatch {
     public LocalTime getEndTime() {
         return endTime;
     }
+
     public void setStartTime(LocalTime startTime) {
         this.startTime = startTime;
     }
@@ -28,11 +29,12 @@ public class StopWatch {
     public void setEndTime(LocalTime endTime) {
         this.endTime = endTime;
     }
-    public void start(){
+
+    public void start() {
         startTime = LocalTime.now();
     }
 
-    public void end(){
+    public void end() {
         endTime = LocalTime.now();
     }
 
