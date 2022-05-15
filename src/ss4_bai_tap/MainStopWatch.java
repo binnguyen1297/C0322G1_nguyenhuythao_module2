@@ -9,8 +9,5 @@ public class MainStopWatch {
         }
         long t2 = System.currentTimeMillis();
 
-        System.out.println(" fisrt: "+ stopWatch.start());
-        System.out.println(" later : "+ stopWatch.end());
-        System.out.println("thời gian : " + stopWatch.getElapsedTime() + " miligiay" );
     }
 }

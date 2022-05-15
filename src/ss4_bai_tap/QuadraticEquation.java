@@ -23,12 +23,12 @@ public class QuadraticEquation {
         return ((-b + Math.sqrt(getDiscriminant()))) / 2 * a;
     }
 
-    public double getRoot() {
-        return (-b / 2 * a);
-    }
-
     public double getRoot2() {
         return ((-b - Math.sqrt(this.getDiscriminant()))) / 2 * a;
+    }
+
+    public double getRoot() {
+        return (-b / 2 * a);
     }
 
     public String Caculator() {
