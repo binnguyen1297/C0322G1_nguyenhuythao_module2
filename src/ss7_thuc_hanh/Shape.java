@@ -35,4 +35,9 @@ public class Shape {
                 + " and "
                 + (isFilled() ? "filled" : "not filled");
     }
+
+
+    public void howToColor() {
+    }
 }
+

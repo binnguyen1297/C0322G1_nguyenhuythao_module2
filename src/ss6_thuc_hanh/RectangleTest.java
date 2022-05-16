@@ -1,5 +1,7 @@
 package ss6_thuc_hanh;
 
+import interface_colorable.Rectangle;
+
 public class RectangleTest {
     public static void main(String[] args) {
         Rectangle rectangle = new Rectangle();

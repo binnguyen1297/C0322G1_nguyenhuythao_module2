@@ -1,5 +1,7 @@
 package ss6_thuc_hanh;
 
+import interface_colorable.Circle;
+
 public class CircleText {
         public static void main(String[] args) {
             Circle circle = new Circle();

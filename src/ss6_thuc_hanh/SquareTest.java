@@ -1,5 +1,7 @@
 package ss6_thuc_hanh;
 
+import interface_colorable.Square;
+
 public class SquareTest {
     public static void main(String[] args) {
         Square square = new Square();

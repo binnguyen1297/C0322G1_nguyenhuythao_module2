@@ -1,6 +1,6 @@
-package ss6_thuc_hanh;
+package interface_colorable;
 
-public class Square extends Rectangle {
+public class Square extends Rectangle implements Colorable {
     public Square() {
     }
 
@@ -10,6 +10,9 @@ public class Square extends Rectangle {
 
     public Square(double side, String color, boolean filled) {
         super(side, side, color, filled);
+    }
+
+    public Square(String red, int x) {
     }
 
     public double getSide() {

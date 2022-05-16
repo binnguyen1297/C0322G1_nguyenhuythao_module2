@@ -1,6 +1,6 @@
-package ss6_thuc_hanh;
+package interface_colorable;
 
-public class Shape {
+public abstract class Shape {
         private String color = "green";
         private boolean filled = true;
 
@@ -36,4 +36,7 @@ public class Shape {
                     + (isFilled() ? "filled" : "not filled");
         }
 
+    public void howToColor() {
+        System.out.println("Color all four sides");
+    }
 }
