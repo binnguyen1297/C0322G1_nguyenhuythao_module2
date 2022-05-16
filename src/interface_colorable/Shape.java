@@ -1,4 +1,4 @@
-package ss6_thuc_hanh;
+package interface_colorable;
 
 public class Shape {
         private String color = "green";
@@ -36,4 +36,6 @@ public class Shape {
                     + (isFilled() ? "filled" : "not filled");
         }
 
+    public void howToColor() {
+    }
 }

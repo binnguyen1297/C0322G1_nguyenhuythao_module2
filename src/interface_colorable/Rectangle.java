@@ -1,4 +1,6 @@
-package ss6_thuc_hanh;
+package interface_colorable;
+
+import interface_colorable.Shape;
 
 public class Rectangle extends Shape {
     private double width = 1.0;
@@ -16,6 +18,9 @@ public class Rectangle extends Shape {
         super(color, filled);
         this.width = width;
         this.length = length;
+    }
+
+    public Rectangle(String red, int x, int x1) {
     }
 
     public double getWidth() {
