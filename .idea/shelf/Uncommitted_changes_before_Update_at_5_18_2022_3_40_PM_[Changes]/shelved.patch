@@ -1,0 +1,1052 @@
+Index: src/Bai_tap_ve_hinh/ChuNhat.java
+===================================================================
+diff --git a/src/Bai_tap_ve_hinh/ChuNhat.java b/src/Bai_tap_ve_hinh/ChuNhat.java
+deleted file mode 100644
+--- a/src/Bai_tap_ve_hinh/ChuNhat.java	(revision 649cf0ce5526debdd3897d51689f8bff59b3199e)
++++ /dev/null	(revision 649cf0ce5526debdd3897d51689f8bff59b3199e)
+@@ -1,23 +0,0 @@
+-package Bai_tap_ve_hinh;
+-
+-import java.util.Scanner;
+-
+-public class ChuNhat {
+-    public static void main(String[] args) {
+-        int dai;
+-        int Rong;
+-        int i;
+-        Scanner scanner = new Scanner(System.in);
+-        System.out.println("nhap chieu cao");
+-        dai = scanner.nextInt();
+-        System.out.println("nhap chieu rong");
+-        Rong = scanner.nextInt();
+-        for (int j = 0; j <= dai; j++) {
+-            for (int k = 0; k < Rong; k++) {
+-                System.out.print(" * ");
+-
+-            }
+-System.out.println("");
+-        }
+-    }
+-}
+Index: src/ss7_thuc_hanh/Circle.java
+===================================================================
+diff --git a/src/ss7_thuc_hanh/Circle.java b/src/ss7_thuc_hanh/Circle.java
+deleted file mode 100644
+--- a/src/ss7_thuc_hanh/Circle.java	(revision 649cf0ce5526debdd3897d51689f8bff59b3199e)
++++ /dev/null	(revision 649cf0ce5526debdd3897d51689f8bff59b3199e)
+@@ -1,41 +0,0 @@
+-package ss7_thuc_hanh;
+-
+-public class Circle extends Shape {
+-    private double radius = 1.0;
+-
+-    public Circle() {
+-    }
+-
+-    public Circle(double radius) {
+-        this.radius = radius;
+-    }
+-
+-    public Circle(double radius, String color, boolean filled) {
+-        super(color, filled);
+-        this.radius = radius;
+-    }
+-
+-    public double getRadius() {
+-        return radius;
+-    }
+-
+-    public void setRadius(double radius) {
+-        this.radius = radius;
+-    }
+-
+-    public double getArea() {
+-        return radius * radius * Math.PI;
+-    }
+-
+-    public double getPerimeter() {
+-        return 2 * radius * Math.PI;
+-    }
+-
+-    @Override
+-    public String toString() {
+-        return "A Circle with radius="
+-                + getRadius()
+-                + ", which is a subclass of "
+-                + super.toString();
+-    }
+-}
+Index: src/ss7_thuc_hanh/RectangleTest.java
+===================================================================
+diff --git a/src/ss7_thuc_hanh/RectangleTest.java b/src/ss7_thuc_hanh/RectangleTest.java
+deleted file mode 100644
+--- a/src/ss7_thuc_hanh/RectangleTest.java	(revision 649cf0ce5526debdd3897d51689f8bff59b3199e)
++++ /dev/null	(revision 649cf0ce5526debdd3897d51689f8bff59b3199e)
+@@ -1,14 +0,0 @@
+-package ss7_thuc_hanh;
+-
+-public class RectangleTest {
+-    public static void main(String[] args) {
+-        Rectangle rectangle = new Rectangle();
+-        System.out.println(rectangle);
+-
+-        rectangle = new Rectangle(2.3, 5.8);
+-        System.out.println(rectangle);
+-
+-        rectangle = new Rectangle(2.5, 3.8, "orange", true);
+-        System.out.println(rectangle);
+-    }
+-}
+Index: src/ss7_thuc_hanh/CircleTest.java
+===================================================================
+diff --git a/src/ss7_thuc_hanh/CircleTest.java b/src/ss7_thuc_hanh/CircleTest.java
+deleted file mode 100644
+--- a/src/ss7_thuc_hanh/CircleTest.java	(revision 649cf0ce5526debdd3897d51689f8bff59b3199e)
++++ /dev/null	(revision 649cf0ce5526debdd3897d51689f8bff59b3199e)
+@@ -1,15 +0,0 @@
+-package ss7_thuc_hanh;
+-
+-public class CircleTest {
+-    public static void main(String[] args) {
+-        Circle circle = new Circle();
+-        System.out.println(circle);
+-
+-        circle = new Circle(3.5);
+-        System.out.println(circle);
+-
+-        circle = new Circle(3.5, "indigo", false);
+-        System.out.println(circle);
+-    }
+-
+-}
+Index: src/ss7_thuc_hanh/Square.java
+===================================================================
+diff --git a/src/ss7_thuc_hanh/Square.java b/src/ss7_thuc_hanh/Square.java
+deleted file mode 100644
+--- a/src/ss7_thuc_hanh/Square.java	(revision 649cf0ce5526debdd3897d51689f8bff59b3199e)
++++ /dev/null	(revision 649cf0ce5526debdd3897d51689f8bff59b3199e)
+@@ -1,44 +0,0 @@
+-package ss7_thuc_hanh;
+-
+-public class Square extends Rectangle {
+-    public Square() {
+-    }
+-
+-    public Square(double side) {
+-        super(side, side);
+-    }
+-
+-    public Square(double side, String color, boolean filled) {
+-        super(side, side, color, filled);
+-    }
+-
+-    public Square(String red, int x) {
+-    }
+-
+-    public double getSide() {
+-        return getWidth();
+-    }
+-
+-    public void setSide(double side) {
+-        setWidth(side);
+-        setLength(side);
+-    }
+-
+-    @Override
+-    public void setWidth(double width) {
+-        setSide(width);
+-    }
+-
+-    @Override
+-    public void setLength(double length) {
+-        setSide(length);
+-    }
+-
+-    @Override
+-    public String toString() {
+-        return "A Square with side="
+-                + getSide()
+-                + ", which is a subclass of "
+-                + super.toString();
+-    }
+-}
+Index: src/ss7_thuc_hanh/ShapeTest.java
+===================================================================
+diff --git a/src/ss7_thuc_hanh/ShapeTest.java b/src/ss7_thuc_hanh/ShapeTest.java
+deleted file mode 100644
+--- a/src/ss7_thuc_hanh/ShapeTest.java	(revision 649cf0ce5526debdd3897d51689f8bff59b3199e)
++++ /dev/null	(revision 649cf0ce5526debdd3897d51689f8bff59b3199e)
+@@ -1,13 +0,0 @@
+-package ss7_thuc_hanh;
+-
+-public class ShapeTest {
+-
+-        public static void main(String[] args) {
+-            Shape shape = new Shape();
+-            System.out.println(shape);
+-
+-            shape = new Shape("red", false);
+-            System.out.println(shape);
+-        }
+-    }
+-
+Index: src/ss7_thuc_hanh/Shape.java
+===================================================================
+diff --git a/src/ss7_thuc_hanh/Shape.java b/src/ss7_thuc_hanh/Shape.java
+deleted file mode 100644
+--- a/src/ss7_thuc_hanh/Shape.java	(revision 649cf0ce5526debdd3897d51689f8bff59b3199e)
++++ /dev/null	(revision 649cf0ce5526debdd3897d51689f8bff59b3199e)
+@@ -1,43 +0,0 @@
+-package ss7_thuc_hanh;
+-
+-public class Shape {
+-    private String color = "green";
+-    private boolean filled = true;
+-
+-    public Shape() {
+-    }
+-
+-    public Shape(String color, boolean filled) {
+-        this.color = color;
+-        this.filled = filled;
+-    }
+-
+-    public String getColor() {
+-        return color;
+-    }
+-
+-    public void setColor(String color) {
+-        this.color = color;
+-    }
+-
+-    public boolean isFilled() {
+-        return filled;
+-    }
+-
+-    public void setFilled(boolean filled) {
+-        this.filled = filled;
+-    }
+-
+-    @Override
+-    public String toString() {
+-        return "A Shape with color of "
+-                + getColor()
+-                + " and "
+-                + (isFilled() ? "filled" : "not filled");
+-    }
+-
+-
+-    public void howToColor() {
+-    }
+-}
+-
+Index: src/ss7_thuc_hanh/Rectangle.java
+===================================================================
+diff --git a/src/ss7_thuc_hanh/Rectangle.java b/src/ss7_thuc_hanh/Rectangle.java
+deleted file mode 100644
+--- a/src/ss7_thuc_hanh/Rectangle.java	(revision 649cf0ce5526debdd3897d51689f8bff59b3199e)
++++ /dev/null	(revision 649cf0ce5526debdd3897d51689f8bff59b3199e)
+@@ -1,58 +0,0 @@
+-package ss7_thuc_hanh;
+-
+-public class Rectangle extends Shape {
+-    private double width = 1.0;
+-    private double length = 1.0;
+-
+-    public Rectangle() {
+-    }
+-
+-    public Rectangle(double width, double length) {
+-        this.width = width;
+-        this.length = length;
+-    }
+-
+-    public Rectangle(double width, double length, String color, boolean filled) {
+-        super(color, filled);
+-        this.width = width;
+-        this.length = length;
+-    }
+-
+-
+-
+-    public double getWidth() {
+-        return width;
+-    }
+-
+-    public void setWidth(double width) {
+-        this.width = width;
+-    }
+-
+-    public double getLength() {
+-        return length;
+-    }
+-
+-    public void setLength(double length) {
+-        this.length = length;
+-    }
+-
+-    public double getArea() {
+-        return width * this.length;
+-    }
+-
+-    public double getPerimeter() {
+-        return 2 * (width + this.length);
+-    }
+-
+-    @Override
+-    public String toString() {
+-        return "A Rectangle with width="
+-                + getWidth()
+-                + " and length="
+-                + getLength()
+-                + ", which is a subclass of "
+-                + super.toString();
+-    }
+-}
+-
+-
+Index: src/ss7_thuc_hanh/SquareTest.java
+===================================================================
+diff --git a/src/ss7_thuc_hanh/SquareTest.java b/src/ss7_thuc_hanh/SquareTest.java
+deleted file mode 100644
+--- a/src/ss7_thuc_hanh/SquareTest.java	(revision 649cf0ce5526debdd3897d51689f8bff59b3199e)
++++ /dev/null	(revision 649cf0ce5526debdd3897d51689f8bff59b3199e)
+@@ -1,14 +0,0 @@
+-package ss7_thuc_hanh;
+-
+-public class SquareTest {
+-    public static void main(String[] args) {
+-        Square square = new Square();
+-        System.out.println(square);
+-
+-        square = new Square(2.3);
+-        System.out.println(square);
+-
+-        square = new Square(5.8,"yellow" ,true);
+-        System.out.println(square);
+-    }
+-}
+Index: src/vong_lap_for/BB.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/vong_lap_for/BB.java b/src/vong_lap_for/BB.java
+new file mode 100644
+--- /dev/null	(date 1652848979095)
++++ b/src/vong_lap_for/BB.java	(date 1652848979095)
+@@ -0,0 +1,22 @@
++package vong_lap_for;
++
++public class BB {
++    public static void main(String[] args) {
++
++        for (int i = 1; i <= 5; i++) {
++            if (i == 1 || i == 5) {
++                for (int j = 1; j <= 5; j++) {
++                    System.out.print("* ");
++                }
++                System.out.println();
++            }
++            if (i != 1 && i < 5) {
++                for (int j = 1; j < i; j++) {
++                    System.out.print("  ");
++                }
++                System.out.println("*");
++            }
++        }
++
++    }
++}
+\ No newline at end of file
+Index: src/vong_lap_for/B.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/vong_lap_for/B.java b/src/vong_lap_for/B.java
+new file mode 100644
+--- /dev/null	(date 1652848975165)
++++ b/src/vong_lap_for/B.java	(date 1652848975165)
+@@ -0,0 +1,11 @@
++package vong_lap_for;
++
++public class B {
++    public static void main(String[] args) {
++        for (int i = 0; i <100 ; i++) {
++            if (i%2==0){
++                System.out.println(i);
++            }
++        }
++    }
++}
+Index: src/vong_lap_for/AA.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/vong_lap_for/AA.java b/src/vong_lap_for/AA.java
+new file mode 100644
+--- /dev/null	(date 1652848969943)
++++ b/src/vong_lap_for/AA.java	(date 1652848969943)
+@@ -0,0 +1,57 @@
++package vong_lap_for;
++
++import java.util.Scanner;
++
++public class AA {
++    public static void main(String[] args) {
++        Scanner scanner = new Scanner(System.in);
++        int chieucao;
++        System.out.println("nhap chieu cao");
++        chieucao = scanner.nextInt();
++//       for (int i = 0; i < chieucao; i++) {
++//           for (int j = 0; j <=i ; j++) {
++//               System.out.print("*");
++//           }
++//            System.out.println("");
++//       }
++//        System.out.println("\n----------------------------------");
++
++
++
++
++//        for (int i = 0; i <= chieucao; i++) {
++//            for (int j = chieucao; j >= i; j--) {
++//                System.out.print("*");
++//            }
++//            System.out.print("\n");
++//        }
++//
++
++
++
++//        for (int i = chieucao; i >= 0; i--) {
++//            for (int j = chieucao-i; j > 0; j--) {
++//                System.out.print(" ");
++//            }
++//            for (int j = i; j > 0; j--) {
++//                System.out.print("*");
++//            }
++//            System.out.println();
++//
++//        }
++//
++//    }
++//}
++        for (int i = 0; i < chieucao ; i++) {
++            for (int j = 0; j < i; j++) {
++                System.out.print(" ");
++            }
++            for (int j = 0; j < i; j++) {
++
++            }
++        }
++
++
++
++    }
++}
+\ No newline at end of file
+Index: src/vong_lap_for/A.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/vong_lap_for/A.java b/src/vong_lap_for/A.java
+new file mode 100644
+--- /dev/null	(date 1652848964964)
++++ b/src/vong_lap_for/A.java	(date 1652848964964)
+@@ -0,0 +1,9 @@
++package vong_lap_for;
++
++public class A {
++    public static void main(String[] args) {
++        for (int i = 0; i <=100; i++) {
++            System.out.println(i);
++        }
++    }
++}
+Index: src/ss9_thuc_hanh/MyList.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/ss9_thuc_hanh/MyList.java b/src/ss9_thuc_hanh/MyList.java
+new file mode 100644
+--- /dev/null	(date 1652848964954)
++++ b/src/ss9_thuc_hanh/MyList.java	(date 1652848964954)
+@@ -0,0 +1,15 @@
++package ss9_thuc_hanh;
++
++public class MyList {
++    private int size = 0;
++    private static final int DEFAULT_CAPACITY = 10;
++    private Object elements[];
++
++    public MyList() {
++        elements = new Object[DEFAULT_CAPACITY];
++    }
++    private void ensureCapa() {
++        int newSize = elements.length * 2;
++      //  elements = Arrays.copyOf(elements, newSize);
++    }
++}
+Index: src/vong_lap_for/BaiTap.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package vong_lap_for;\r\n\r\nimport java.net.SocketOption;\r\nimport java.util.Scanner;\r\n\r\n//public class BaiTap {\r\n//    public static void main(String[] args) {\r\n//\r\n//        for (int i = 2; i <= 9; i++) ;\r\n//        {\r\n//            for (int j = 1; j <= 10; j++) {\r\n//                System.out.println(  i + \" x \" + j + \" = \" + (i * j));\r\n//            }\r\n//System.out.println(\"----\");\r\n//        }\r\n//\r\n//    }\r\n//}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/vong_lap_for/BaiTap.java b/src/vong_lap_for/BaiTap.java
+--- a/src/vong_lap_for/BaiTap.java	(revision 649cf0ce5526debdd3897d51689f8bff59b3199e)
++++ b/src/vong_lap_for/BaiTap.java	(date 1652848964964)
+@@ -3,16 +3,16 @@
+ import java.net.SocketOption;
+ import java.util.Scanner;
+ 
+-//public class BaiTap {
+-//    public static void main(String[] args) {
+-//
+-//        for (int i = 2; i <= 9; i++) ;
+-//        {
+-//            for (int j = 1; j <= 10; j++) {
+-//                System.out.println(  i + " x " + j + " = " + (i * j));
+-//            }
+-//System.out.println("----");
+-//        }
+-//
+-//    }
+-//}
++public class BaiTap {
++    public static void main(String[] args) {
++        Scanner scanner = new Scanner(System.in);
++        for (int i = 2; i<=9;i++);
++        for (int j = 1; j <=10 ; j++) {
++      //      System.out.println((i + " x ")+ j +" ="+(i*j));
++
++        }
++
++    }
++
++    }
++
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"ChangeListManager\">\r\n    <list default=\"true\" id=\"f255574f-0166-468f-8711-379711e5d3d7\" name=\"Changes\" comment=\"git commit-m &quot;up bai tap&quot;\">\r\n      <change afterPath=\"$PROJECT_DIR$/src/interface_colorable/Colorable.java\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/workspace.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/workspace.xml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/out/production/C0322G1_nguyenhuythao_module2/ss6_thuc_hanh/Circle.class\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/out/production/C0322G1_nguyenhuythao_module2/ss6_thuc_hanh/CircleText.class\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/out/production/C0322G1_nguyenhuythao_module2/ss6_thuc_hanh/CircleText.class\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/out/production/C0322G1_nguyenhuythao_module2/ss6_thuc_hanh/Rectangle.class\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/out/production/C0322G1_nguyenhuythao_module2/ss6_thuc_hanh/RectangleTest.class\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/out/production/C0322G1_nguyenhuythao_module2/ss6_thuc_hanh/RectangleTest.class\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/out/production/C0322G1_nguyenhuythao_module2/ss6_thuc_hanh/Shape.class\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/out/production/C0322G1_nguyenhuythao_module2/ss6_thuc_hanh/ShapeTest.class\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/out/production/C0322G1_nguyenhuythao_module2/ss6_thuc_hanh/Square.class\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/out/production/C0322G1_nguyenhuythao_module2/ss6_thuc_hanh/SquareTest.class\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/out/production/C0322G1_nguyenhuythao_module2/ss6_thuc_hanh/SquareTest.class\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/out/production/C0322G1_nguyenhuythao_module2/ss7_thuc_hanh/Rectangle.class\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/out/production/C0322G1_nguyenhuythao_module2/ss7_thuc_hanh/Rectangle.class\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/out/production/C0322G1_nguyenhuythao_module2/ss7_thuc_hanh/Shape.class\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/out/production/C0322G1_nguyenhuythao_module2/ss7_thuc_hanh/Shape.class\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/out/production/C0322G1_nguyenhuythao_module2/ss7_thuc_hanh/Square.class\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/out/production/C0322G1_nguyenhuythao_module2/ss7_thuc_hanh/Square.class\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/interface_colorable/MainColorable.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/interface_colorable/MainColorable.java\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/interface_colorable/Shape.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/interface_colorable/Shape.java\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/interface_colorable/Square.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/interface_colorable/Square.java\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/ss6_thuc_hanh/ShapeTest.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/ss6_thuc_hanh/ShapeTest.java\" afterDir=\"false\" />\r\n    </list>\r\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\r\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\r\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\r\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\r\n  </component>\r\n  <component name=\"FileTemplateManagerImpl\">\r\n    <option name=\"RECENT_TEMPLATES\">\r\n      <list>\r\n        <option value=\"Kotlin Class\" />\r\n        <option value=\"Class\" />\r\n      </list>\r\n    </option>\r\n  </component>\r\n  <component name=\"Git.Settings\">\r\n    <option name=\"PUSH_AUTO_UPDATE\" value=\"true\" />\r\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\r\n  </component>\r\n  <component name=\"GitSEFilterConfiguration\">\r\n    <file-type-list>\r\n      <filtered-out-file-type name=\"LOCAL_BRANCH\" />\r\n      <filtered-out-file-type name=\"REMOTE_BRANCH\" />\r\n      <filtered-out-file-type name=\"TAG\" />\r\n      <filtered-out-file-type name=\"COMMIT_BY_MESSAGE\" />\r\n    </file-type-list>\r\n  </component>\r\n  <component name=\"ProjectId\" id=\"2901r3YkZoonYpgedZZRRw0vrVP\" />\r\n  <component name=\"ProjectViewState\">\r\n    <option name=\"flattenPackages\" value=\"true\" />\r\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\r\n    <option name=\"showLibraryContents\" value=\"true\" />\r\n  </component>\r\n  <component name=\"PropertiesComponent\">\r\n    <property name=\"RunOnceActivity.OpenProjectViewOnStart\" value=\"true\" />\r\n    <property name=\"RunOnceActivity.ShowReadmeOnStart\" value=\"true\" />\r\n    <property name=\"WebServerToolWindowFactoryState\" value=\"false\" />\r\n    <property name=\"last_opened_file_path\" value=\"$USER_HOME$\" />\r\n    <property name=\"settings.editor.selected.configurable\" value=\"reference.projectsettings.compiler.javacompiler\" />\r\n  </component>\r\n  <component name=\"RunManager\" selected=\"Application.MainColorable\">\r\n    <configuration name=\"CrircleTest\" type=\"Application\" factoryName=\"Application\" temporary=\"true\" nameIsGenerated=\"true\">\r\n      <option name=\"MAIN_CLASS_NAME\" value=\"ss7_bai_tap.CrircleTest\" />\r\n      <module name=\"C0322G1_nguyenhuythao_module2\" />\r\n      <extension name=\"coverage\">\r\n        <pattern>\r\n          <option name=\"PATTERN\" value=\"ss7_bai_tap.*\" />\r\n          <option name=\"ENABLED\" value=\"true\" />\r\n        </pattern>\r\n      </extension>\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n    <configuration name=\"CylinderTest\" type=\"Application\" factoryName=\"Application\" temporary=\"true\" nameIsGenerated=\"true\">\r\n      <option name=\"MAIN_CLASS_NAME\" value=\"ss7_bai_tap.CylinderTest\" />\r\n      <module name=\"C0322G1_nguyenhuythao_module2\" />\r\n      <extension name=\"coverage\">\r\n        <pattern>\r\n          <option name=\"PATTERN\" value=\"ss7_bai_tap.*\" />\r\n          <option name=\"ENABLED\" value=\"true\" />\r\n        </pattern>\r\n      </extension>\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n    <configuration name=\"MainColorable\" type=\"Application\" factoryName=\"Application\" temporary=\"true\" nameIsGenerated=\"true\">\r\n      <option name=\"MAIN_CLASS_NAME\" value=\"interface_colorable.MainColorable\" />\r\n      <module name=\"C0322G1_nguyenhuythao_module2\" />\r\n      <extension name=\"coverage\">\r\n        <pattern>\r\n          <option name=\"PATTERN\" value=\"interface_colorable.*\" />\r\n          <option name=\"ENABLED\" value=\"true\" />\r\n        </pattern>\r\n      </extension>\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n    <configuration name=\"MainStudent\" type=\"Application\" factoryName=\"Application\" temporary=\"true\" nameIsGenerated=\"true\">\r\n      <option name=\"MAIN_CLASS_NAME\" value=\"DanhSachSinhVien.MainStudent\" />\r\n      <module name=\"C0322G1_nguyenhuythao_module2\" />\r\n      <extension name=\"coverage\">\r\n        <pattern>\r\n          <option name=\"PATTERN\" value=\"DanhSachSinhVien.*\" />\r\n          <option name=\"ENABLED\" value=\"true\" />\r\n        </pattern>\r\n      </extension>\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n    <configuration name=\"TestPoint2DAndPoint3D\" type=\"Application\" factoryName=\"Application\" temporary=\"true\" nameIsGenerated=\"true\">\r\n      <option name=\"MAIN_CLASS_NAME\" value=\"ss7_bai_tap.point2d_3d.TestPoint2DAndPoint3D\" />\r\n      <module name=\"C0322G1_nguyenhuythao_module2\" />\r\n      <extension name=\"coverage\">\r\n        <pattern>\r\n          <option name=\"PATTERN\" value=\"ss7_bai_tap.point2d_3d.*\" />\r\n          <option name=\"ENABLED\" value=\"true\" />\r\n        </pattern>\r\n      </extension>\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n    <recent_temporary>\r\n      <list>\r\n        <item itemvalue=\"Application.MainColorable\" />\r\n        <item itemvalue=\"Application.TestPoint2DAndPoint3D\" />\r\n        <item itemvalue=\"Application.MainStudent\" />\r\n        <item itemvalue=\"Application.CylinderTest\" />\r\n        <item itemvalue=\"Application.CrircleTest\" />\r\n      </list>\r\n    </recent_temporary>\r\n  </component>\r\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\r\n  <component name=\"TaskManager\">\r\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\r\n      <changelist id=\"f255574f-0166-468f-8711-379711e5d3d7\" name=\"Changes\" comment=\"\" />\r\n      <created>1652235386970</created>\r\n      <option name=\"number\" value=\"Default\" />\r\n      <option name=\"presentableId\" value=\"Default\" />\r\n      <updated>1652235386970</updated>\r\n      <workItem from=\"1652235389890\" duration=\"13135000\" />\r\n      <workItem from=\"1652278830654\" duration=\"2082000\" />\r\n      <workItem from=\"1652317827229\" duration=\"12236000\" />\r\n      <workItem from=\"1652364473320\" duration=\"5830000\" />\r\n      <workItem from=\"1652398783604\" duration=\"1548000\" />\r\n      <workItem from=\"1652405345402\" duration=\"15600000\" />\r\n      <workItem from=\"1652498038727\" duration=\"5478000\" />\r\n      <workItem from=\"1652585540657\" duration=\"73000\" />\r\n      <workItem from=\"1652618698645\" duration=\"3299000\" />\r\n      <workItem from=\"1652664147820\" duration=\"2347000\" />\r\n    </task>\r\n    <task id=\"LOCAL-00001\" summary=\"Merge remote-tracking branch 'origin/main'&#10;&#10;# Conflicts:&#10;#&#9;out/production/C0322G1_nguyenhuythao_module2/ss3_bai_tap/ThemPhanTuVaoMang.class\">\r\n      <created>1652325400417</created>\r\n      <option name=\"number\" value=\"00001\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00001\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1652325400417</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00002\" summary=\"git commit-m &quot;up bai&quot;\">\r\n      <created>1652618731392</created>\r\n      <option name=\"number\" value=\"00002\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00002\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1652618731392</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00003\" summary=\"git commit-m &quot;up bai tap&quot;\">\r\n      <created>1652664667744</created>\r\n      <option name=\"number\" value=\"00003\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00003\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1652664667744</updated>\r\n    </task>\r\n    <option name=\"localTasksCounter\" value=\"4\" />\r\n    <servers />\r\n  </component>\r\n  <component name=\"TypeScriptGeneratedFilesManager\">\r\n    <option name=\"version\" value=\"3\" />\r\n  </component>\r\n  <component name=\"Vcs.Log.Tabs.Properties\">\r\n    <option name=\"TAB_STATES\">\r\n      <map>\r\n        <entry key=\"MAIN\">\r\n          <value>\r\n            <State />\r\n          </value>\r\n        </entry>\r\n      </map>\r\n    </option>\r\n    <option name=\"oldMeFiltersMigrated\" value=\"true\" />\r\n  </component>\r\n  <component name=\"VcsManagerConfiguration\">\r\n    <MESSAGE value=\"Merge remote-tracking branch 'origin/main'&#10;&#10;# Conflicts:&#10;#&#9;out/production/C0322G1_nguyenhuythao_module2/ss3_bai_tap/ThemPhanTuVaoMang.class\" />\r\n    <MESSAGE value=\"git commit-m &quot;up bai&quot;\" />\r\n    <MESSAGE value=\"git commit-m &quot;up bai tap&quot;\" />\r\n    <option name=\"LAST_COMMIT_MESSAGE\" value=\"git commit-m &quot;up bai tap&quot;\" />\r\n    <option name=\"GROUP_MULTIFILE_MERGE_BY_DIRECTORY\" value=\"true\" />\r\n  </component>\r\n  <component name=\"XDebuggerManager\">\r\n    <breakpoint-manager>\r\n      <breakpoints>\r\n        <line-breakpoint enabled=\"true\" type=\"java-line\">\r\n          <url>file://$PROJECT_DIR$/src/ss5_thuc_hanh/TestStaticMethod.java</url>\r\n          <line>2</line>\r\n          <option name=\"timeStamp\" value=\"1\" />\r\n        </line-breakpoint>\r\n        <line-breakpoint enabled=\"true\" type=\"java-line\">\r\n          <url>file://$PROJECT_DIR$/src/ss5_bai_tap/AccessModifier.java</url>\r\n          <line>29</line>\r\n          <option name=\"timeStamp\" value=\"2\" />\r\n        </line-breakpoint>\r\n        <line-breakpoint enabled=\"true\" type=\"java-line\">\r\n          <url>file://$PROJECT_DIR$/src/DanhSachSinhVien/MainStudent.java</url>\r\n          <line>6</line>\r\n          <option name=\"timeStamp\" value=\"3\" />\r\n        </line-breakpoint>\r\n      </breakpoints>\r\n    </breakpoint-manager>\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	(revision 649cf0ce5526debdd3897d51689f8bff59b3199e)
++++ b/.idea/workspace.xml	(date 1652862860247)
+@@ -1,24 +1,44 @@
+ <?xml version="1.0" encoding="UTF-8"?>
+ <project version="4">
+   <component name="ChangeListManager">
+-    <list default="true" id="f255574f-0166-468f-8711-379711e5d3d7" name="Changes" comment="git commit-m &quot;up bai tap&quot;">
+-      <change afterPath="$PROJECT_DIR$/src/interface_colorable/Colorable.java" afterDir="false" />
++    <list default="true" id="75f096c9-7898-48ee-8089-4eae20be378e" name="Changes" comment="git commit-m &quot;up bai tap&quot;">
++      <change afterPath="$PROJECT_DIR$/src/ss9_bai_tap_ArrayList/ArrayList.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/ss9_bai_tap_ArrayList/MainArrayList.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/ss9_thuc_hanh/MyList.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/vong_lap_for/A.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/vong_lap_for/AA.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/vong_lap_for/B.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/vong_lap_for/BB.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/vong_lap_for/BBB.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/vong_lap_for/C.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/vong_lap_for/D.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/vong_lap_for/E.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/vong_lap_for/F.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/vong_lap_for/G.java" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/out/production/C0322G1_nguyenhuythao_module2/ss6_thuc_hanh/Circle.class" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/out/production/C0322G1_nguyenhuythao_module2/ss6_thuc_hanh/CircleText.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/C0322G1_nguyenhuythao_module2/ss6_thuc_hanh/CircleText.class" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/out/production/C0322G1_nguyenhuythao_module2/ss6_thuc_hanh/Rectangle.class" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/out/production/C0322G1_nguyenhuythao_module2/ss6_thuc_hanh/RectangleTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/C0322G1_nguyenhuythao_module2/ss6_thuc_hanh/RectangleTest.class" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/out/production/C0322G1_nguyenhuythao_module2/ss6_thuc_hanh/Shape.class" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/out/production/C0322G1_nguyenhuythao_module2/ss6_thuc_hanh/ShapeTest.class" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/out/production/C0322G1_nguyenhuythao_module2/ss6_thuc_hanh/Square.class" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/out/production/C0322G1_nguyenhuythao_module2/ss6_thuc_hanh/SquareTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/C0322G1_nguyenhuythao_module2/ss6_thuc_hanh/SquareTest.class" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/out/production/C0322G1_nguyenhuythao_module2/ss7_thuc_hanh/Rectangle.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/C0322G1_nguyenhuythao_module2/ss7_thuc_hanh/Rectangle.class" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/out/production/C0322G1_nguyenhuythao_module2/ss7_thuc_hanh/Shape.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/C0322G1_nguyenhuythao_module2/ss7_thuc_hanh/Shape.class" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/out/production/C0322G1_nguyenhuythao_module2/ss7_thuc_hanh/Square.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/C0322G1_nguyenhuythao_module2/ss7_thuc_hanh/Square.class" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/interface_colorable/MainColorable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/interface_colorable/MainColorable.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/interface_colorable/Shape.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/interface_colorable/Shape.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/interface_colorable/Square.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/interface_colorable/Square.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/ss6_thuc_hanh/ShapeTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ss6_thuc_hanh/ShapeTest.java" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/out/production/C0322G1_nguyenhuythao_module2/ss3_bai_tap/GopMang.class" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/out/production/C0322G1_nguyenhuythao_module2/ss5_bai_tap/AccessModifier.class" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/out/production/C0322G1_nguyenhuythao_module2/ss5_bai_tap/TestCircle.class" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/out/production/C0322G1_nguyenhuythao_module2/ss6_bai_tap/AccessModifier.class" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/out/production/C0322G1_nguyenhuythao_module2/ss6_bai_tap/AccessModifierTest.class" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/out/production/C0322G1_nguyenhuythao_module2/ss6_bai_tap/Students.class" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/out/production/C0322G1_nguyenhuythao_module2/ss7_thuc_hanh/Circle.class" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/out/production/C0322G1_nguyenhuythao_module2/ss7_thuc_hanh/CircleTest.class" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/out/production/C0322G1_nguyenhuythao_module2/ss7_thuc_hanh/Rectangle.class" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/out/production/C0322G1_nguyenhuythao_module2/ss7_thuc_hanh/RectangleTest.class" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/out/production/C0322G1_nguyenhuythao_module2/ss7_thuc_hanh/Shape.class" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/out/production/C0322G1_nguyenhuythao_module2/ss7_thuc_hanh/ShapeTest.class" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/out/production/C0322G1_nguyenhuythao_module2/ss7_thuc_hanh/Square.class" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/out/production/C0322G1_nguyenhuythao_module2/ss7_thuc_hanh/SquareTest.class" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/ss7_thuc_hanh/Circle.java" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/ss7_thuc_hanh/CircleTest.java" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/ss7_thuc_hanh/Rectangle.java" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/ss7_thuc_hanh/RectangleTest.java" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/ss7_thuc_hanh/Shape.java" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/ss7_thuc_hanh/ShapeTest.java" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/ss7_thuc_hanh/Square.java" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/ss7_thuc_hanh/SquareTest.java" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/vong_lap_for/BaiTap.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/vong_lap_for/BaiTap.java" afterDir="false" />
+     </list>
+     <option name="SHOW_DIALOG" value="false" />
+     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+@@ -44,6 +64,9 @@
+       <filtered-out-file-type name="TAG" />
+       <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+     </file-type-list>
++  </component>
++  <component name="HighlightingSettingsPerFile">
++    <setting file="file://$PROJECT_DIR$/src/interface_colorable/Shape.java" root0="SKIP_HIGHLIGHTING" />
+   </component>
+   <component name="ProjectId" id="2901r3YkZoonYpgedZZRRw0vrVP" />
+   <component name="ProjectViewState">
+@@ -58,9 +81,9 @@
+     <property name="last_opened_file_path" value="$USER_HOME$" />
+     <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.javacompiler" />
+   </component>
+-  <component name="RunManager" selected="Application.MainColorable">
+-    <configuration name="CrircleTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+-      <option name="MAIN_CLASS_NAME" value="ss7_bai_tap.CrircleTest" />
++  <component name="RunManager" selected="Application.MainArrayList">
++    <configuration name="CylinderTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
++      <option name="MAIN_CLASS_NAME" value="ss7_bai_tap.CylinderTest" />
+       <module name="C0322G1_nguyenhuythao_module2" />
+       <extension name="coverage">
+         <pattern>
+@@ -72,12 +95,12 @@
+         <option name="Make" enabled="true" />
+       </method>
+     </configuration>
+-    <configuration name="CylinderTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+-      <option name="MAIN_CLASS_NAME" value="ss7_bai_tap.CylinderTest" />
++    <configuration name="MainArrayList" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
++      <option name="MAIN_CLASS_NAME" value="ss9_bai_tap_ArrayList.MainArrayList" />
+       <module name="C0322G1_nguyenhuythao_module2" />
+       <extension name="coverage">
+         <pattern>
+-          <option name="PATTERN" value="ss7_bai_tap.*" />
++          <option name="PATTERN" value="ss9_bai_tap_ArrayList.*" />
+           <option name="ENABLED" value="true" />
+         </pattern>
+       </extension>
+@@ -126,18 +149,18 @@
+     </configuration>
+     <recent_temporary>
+       <list>
++        <item itemvalue="Application.MainArrayList" />
+         <item itemvalue="Application.MainColorable" />
+         <item itemvalue="Application.TestPoint2DAndPoint3D" />
+         <item itemvalue="Application.MainStudent" />
+         <item itemvalue="Application.CylinderTest" />
+-        <item itemvalue="Application.CrircleTest" />
+       </list>
+     </recent_temporary>
+   </component>
+   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+   <component name="TaskManager">
+     <task active="true" id="Default" summary="Default task">
+-      <changelist id="f255574f-0166-468f-8711-379711e5d3d7" name="Changes" comment="" />
++      <changelist id="75f096c9-7898-48ee-8089-4eae20be378e" name="Changes" comment="git commit-m &quot;up bai tap&quot;" />
+       <created>1652235386970</created>
+       <option name="number" value="Default" />
+       <option name="presentableId" value="Default" />
+@@ -152,6 +175,8 @@
+       <workItem from="1652585540657" duration="73000" />
+       <workItem from="1652618698645" duration="3299000" />
+       <workItem from="1652664147820" duration="2347000" />
++      <workItem from="1652848540219" duration="732000" />
++      <workItem from="1652849295431" duration="2070000" />
+     </task>
+     <task id="LOCAL-00001" summary="Merge remote-tracking branch 'origin/main'&#10;&#10;# Conflicts:&#10;#&#9;out/production/C0322G1_nguyenhuythao_module2/ss3_bai_tap/ThemPhanTuVaoMang.class">
+       <created>1652325400417</created>
+Index: src/ss9_bai_tap_ArrayList/ArrayList.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/ss9_bai_tap_ArrayList/ArrayList.java b/src/ss9_bai_tap_ArrayList/ArrayList.java
+new file mode 100644
+--- /dev/null	(date 1652862211446)
++++ b/src/ss9_bai_tap_ArrayList/ArrayList.java	(date 1652862211446)
+@@ -0,0 +1,110 @@
++package ss9_bai_tap_ArrayList;
++
++import java.util.Arrays;
++
++public class ArrayList <E> {
++    private int size = 0;
++    private static final int DEFAULT_CAPACITY = 10;
++    private Object[] elements;
++
++    public ArrayList() {
++        elements = new Object[DEFAULT_CAPACITY];
++    }
++
++    public ArrayList(int capacity) {
++        elements = new Object[capacity];
++    }
++
++    private void ensureCapa() {
++        if (size > elements.length) {
++            int newSize = elements.length * 2;
++            elements = Arrays.copyOf(elements, newSize);
++        }
++    }
++
++    public void add(Object x) {
++        size += 1;
++        ensureCapa();
++        elements[size-1] = x;
++    }
++
++    public boolean add(Object x, int index) {
++        if (index >= 0 && index <= size) {
++            size += 1;
++            ensureCapa();
++            for (int i = size - 2; i >= index; i--) {
++                elements[i + 1] = elements[i];
++            }
++            elements[index] = x;
++            return true;
++        }
++        return false;
++    }
++
++    public boolean remove(int index) {
++        if (index >= 0 && index < size) {
++            for (int i = index; i < size; i++) {
++                elements[i] = elements[i + 1];
++            }
++            size -= 1;
++            return true;
++        }
++        return false;
++    }
++
++    public int size() {
++        return size;
++    }
++
++    public ArrayList<E> clone() {
++        ArrayList<E> xx = new ArrayList<>(elements.length);
++        for (Object x : elements) {
++            xx.add(x);
++        }
++        return xx;
++    }
++
++    public boolean contains(Object e) {
++        for (Object x : elements) {
++            if (e.equals(x)) {
++                return true;
++            }
++        }
++        return false;
++    }
++
++    public int indexOf(Object x) {
++        for (int i = 0; i < size; i++) {
++            if (elements[i].equals(x)) {
++                return i;
++            }
++        }
++        return -1;
++    }
++
++    public boolean isEmpty(Object x) {
++        for (int i = 0; i < size; i++) {
++            if (elements[i].equals(x)) {
++                return true;
++            }
++        }return false;
++    }
++
++
++    public Object get(int index) {
++        if (index >= 0 && index < size) {
++            return (Object) elements[index];
++        }
++        return null;
++    }
++
++    public void clear() {
++        elements = (Object[]) new Object[DEFAULT_CAPACITY];
++        size = 0;
++    }
++
++    public Object[] getElements() {
++        return this.elements;
++    }
++
++}
+Index: src/ss9_bai_tap_ArrayList/MainArrayList.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/ss9_bai_tap_ArrayList/MainArrayList.java b/src/ss9_bai_tap_ArrayList/MainArrayList.java
+new file mode 100644
+--- /dev/null	(date 1652862833534)
++++ b/src/ss9_bai_tap_ArrayList/MainArrayList.java	(date 1652862833534)
+@@ -0,0 +1,42 @@
++package ss9_bai_tap_ArrayList;
++
++public class MainArrayList {
++    public static void main(String[] args) {
++        ArrayList<String> list = new ArrayList<String>();
++        list.add("zakuza");
++        list.add("giang ho");
++        list.add(" internet");
++        list.add("mafia");
++
++        print(list.getElements());
++
++        System.out.println(list.indexOf("Yes"));
++        System.out.println(list.indexOf("No"));
++
++        list.remove(1);
++        list.add("very", 1);
++        print(list.getElements());
++
++        ArrayList<String> clone = list.clone();
++
++        System.out.println(clone.contains("Đẹp"));
++        System.out.println(clone.contains("handsome"));
++
++        System.out.println(clone.get(3));
++        System.out.println(clone.size());
++        clone.clear();
++        System.out.println(clone.size());
++        print(clone.getElements());
++
++
++    }
++
++    static void print(Object[] list) {
++        for (Object x : list) {
++            if (!(x == null)) {
++                System.out.println((String) x);
++            }
++        }
++        System.out.println("\n");
++    }
++}
+Index: src/vong_lap_for/G.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/vong_lap_for/G.java b/src/vong_lap_for/G.java
+new file mode 100644
+--- /dev/null	(date 1652849001045)
++++ b/src/vong_lap_for/G.java	(date 1652849001045)
+@@ -0,0 +1,26 @@
++package vong_lap_for;
++
++import java.util.Scanner;
++
++public class G {
++    public static void main(String[] args) {
++        Scanner scanner = new Scanner(System.in);
++        System.out.println("nhap chieu dai");
++        double dai = scanner.nextDouble();
++        System.out.println("nhap chieu rong");
++        double rong = scanner.nextDouble();
++        for (int i = 1; i <= dai; i++) {
++            for (int j = 1; j <= rong; j++) {
++                if (i == 1 || i == dai || j == rong) {
++                    System.out.print("*");
++                }
++                else {
++                    System.out.print(" ");
++                }
++
++            }System.out.println("");
++
++        }
++            }
++        }
++
+Index: src/vong_lap_for/F.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/vong_lap_for/F.java b/src/vong_lap_for/F.java
+new file mode 100644
+--- /dev/null	(date 1652848998113)
++++ b/src/vong_lap_for/F.java	(date 1652848998113)
+@@ -0,0 +1,27 @@
++package vong_lap_for;
++
++import java.util.Scanner;
++
++public class F {
++    public static void main(String[] args) {
++        Scanner scanner = new Scanner(System.in);
++        System.out.println("nhap chieu rong");
++        double rong = scanner.nextDouble();
++        System.out.println("nhap chieu dai");
++        double dai = scanner.nextDouble();
++        for (int i = 1; i <= dai; i++) {
++            for (int j = 1; j <= rong; j++) {
++                if (i == 1 || i == dai || j == 1 || j == rong) {
++                    System.out.print(" *");
++                }
++                else {
++                    System.out.print("  ");
++                }
++
++            }System.out.println("");
++
++        }
++
++
++    }
++}
+\ No newline at end of file
+Index: src/vong_lap_for/E.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/vong_lap_for/E.java b/src/vong_lap_for/E.java
+new file mode 100644
+--- /dev/null	(date 1652848995074)
++++ b/src/vong_lap_for/E.java	(date 1652848995074)
+@@ -0,0 +1,19 @@
++package vong_lap_for;
++
++import java.util.Scanner;
++
++public class E {
++    public static void main(String[] args) {
++        Scanner scanner = new Scanner(System.in);
++        System.out.println("nhap chieu rong");
++        double rong = scanner.nextDouble();
++        System.out.println("nhap chieu dai");
++        double dai = scanner.nextDouble();
++        for (int i = 1; i <= rong; i++) {
++            for (int j = 1; j <= dai; j++) {
++
++                System.out.print("*");
++            }System.out.println("  ");
++        }
++    }
++}
+\ No newline at end of file
+Index: src/vong_lap_for/D.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/vong_lap_for/D.java b/src/vong_lap_for/D.java
+new file mode 100644
+--- /dev/null	(date 1652848991203)
++++ b/src/vong_lap_for/D.java	(date 1652848991203)
+@@ -0,0 +1,15 @@
++package vong_lap_for;
++
++public class D {
++    public static void main(String[] args) {
++        int count = 0;
++        for (int i = 0; count <=100  ; i++) {
++            if (i % 3 == 0) {
++                System.out.println(i);
++                count++;
++            }
++        }
++
++    }
++}
++
+Index: src/vong_lap_for/C.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/vong_lap_for/C.java b/src/vong_lap_for/C.java
+new file mode 100644
+--- /dev/null	(date 1652848987667)
++++ b/src/vong_lap_for/C.java	(date 1652848987667)
+@@ -0,0 +1,11 @@
++package vong_lap_for;
++
++public class C {
++    public static void main(String[] args) {
++        for (int i = 0; i < 100; i++) {
++            if (i % 3 == 0) {
++                System.out.println(i);
++            }
++        }
++    }
++}
+Index: src/vong_lap_for/BBB.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/vong_lap_for/BBB.java b/src/vong_lap_for/BBB.java
+new file mode 100644
+--- /dev/null	(date 1652848983635)
++++ b/src/vong_lap_for/BBB.java	(date 1652848983635)
+@@ -0,0 +1,45 @@
++package vong_lap_for;
++
++public class BBB {
++    public static void main(String[] args) {
++        int n = 5;
++        for (int i = 1; i <= n; i++) {
++            for (int j = 1; j <= 5; j++) {
++                if (i == 1 || i == n || j == n - i + 1) {
++                    System.out.print("* ");
++                } else {
++                    System.out.print("  ");
++                }
++            }
++            System.out.println();
++        }
++
++//       for(int i=1;i<=5;i++)
++//    {
++//        if(i==1||i==5)
++//        {
++//            for(int j=1;j<=5;j++)
++//            {
++//                System.out.print("* ");
++//            }
++//            System.out.println();
++//        }
++//        if(i!=1&&i<5)
++//        {
++//            for(int j=1;j<=5-i;j++)
++//            {
++//                System.out.print("  ");
++//            }
++//            System.out.print("*");
++//            for(int k=1;k<i;k++)
++//            {
++//                System.out.print("  ");
++//            }
++//            System.out.println();
++//        }
++//
++//    }
++
++}
++}
++

@@ -1,0 +1,1406 @@
+Index: src/vong_lap_for/BB.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/vong_lap_for/BB.java b/src/vong_lap_for/BB.java
+new file mode 100644
+--- /dev/null	(date 1652777766446)
++++ b/src/vong_lap_for/BB.java	(date 1652777766446)
+@@ -0,0 +1,22 @@
++package vong_lap_for;
++
++public class BB {
++    public static void main(String[] args) {
++
++        for (int i = 1; i <= 5; i++) {
++            if (i == 1 || i == 5) {
++                for (int j = 1; j <= 5; j++) {
++                    System.out.print("* ");
++                }
++                System.out.println();
++            }
++            if (i != 1 && i < 5) {
++                for (int j = 1; j < i; j++) {
++                    System.out.print("  ");
++                }
++                System.out.println("*");
++            }
++        }
++
++    }
++}
+\ No newline at end of file
+Index: src/vong_lap_for/BBB.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/vong_lap_for/BBB.java b/src/vong_lap_for/BBB.java
+new file mode 100644
+--- /dev/null	(date 1652801877197)
++++ b/src/vong_lap_for/BBB.java	(date 1652801877197)
+@@ -0,0 +1,45 @@
++package vong_lap_for;
++
++public class BBB {
++    public static void main(String[] args) {
++        int n = 5;
++        for (int i = 1; i <= n; i++) {
++            for (int j = 1; j <= 5; j++) {
++                if (i == 1 || i == n || j == n - i + 1) {
++                    System.out.print("* ");
++                } else {
++                    System.out.print("  ");
++                }
++            }
++            System.out.println();
++        }
++
++//       for(int i=1;i<=5;i++)
++//    {
++//        if(i==1||i==5)
++//        {
++//            for(int j=1;j<=5;j++)
++//            {
++//                System.out.print("* ");
++//            }
++//            System.out.println();
++//        }
++//        if(i!=1&&i<5)
++//        {
++//            for(int j=1;j<=5-i;j++)
++//            {
++//                System.out.print("  ");
++//            }
++//            System.out.print("*");
++//            for(int k=1;k<i;k++)
++//            {
++//                System.out.print("  ");
++//            }
++//            System.out.println();
++//        }
++//
++//    }
++
++}
++}
++
+Index: src/ss8_bai_tap/TenisGame.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/ss8_bai_tap/TenisGame.java b/src/ss8_bai_tap/TenisGame.java
+new file mode 100644
+--- /dev/null	(date 1652690700332)
++++ b/src/ss8_bai_tap/TenisGame.java	(date 1652690700332)
+@@ -0,0 +1,63 @@
++package ss8_bai_tap;
++
++public class TenisGame {
++    public static String getScore(String player1Name, String player2Name, int m_score1, int m_score2) {
++        String score = "";
++        int tempScore = 0;
++        if (m_score1 == m_score2) {
++            switch (m_score1) {
++                case 0:
++                    score = "Love-All";
++                    break;
++                case 1:
++                    score = "Fifteen-All";
++                    break;
++                case 2:
++                    score = "Thirty-All";
++                    break;
++                case 3:
++                    score = "Forty-All";
++                    break;
++                default:
++                    score = "Deuce";
++                    break;
++
++            }
++        } else if (m_score1 >= 4 || m_score2 >= 4) {
++            score = getScore(m_score1, m_score2);
++        } else {
++            for (int i = 1; i < 3; i++) {
++                if (i == 1) tempScore = m_score1;
++                else {
++                    score += "-";
++                    tempScore = m_score2;
++                }
++                switch (tempScore) {
++                    case 0:
++                        score += "Love";
++                        break;
++                    case 1:
++                        score += "Fifteen";
++                        break;
++                    case 2:
++                        score += "Thirty";
++                        break;
++                    case 3:
++                        score += "Forty";
++                        break;
++                }
++            }
++        }
++        return score;
++    }
++
++    private static String getScore(int m_score1, int m_score2) {
++        String score;
++        int minusResult = m_score1 - m_score2;
++        if (minusResult == 1) score = "Advantage player1";
++        else if (minusResult == -1) score = "Advantage player2";
++        else if (minusResult >= 2) score = "Win for player1";
++        else score = "Win for player2";
++        return score;
++    }
++}
+Index: src/ss9_bai_tap_ArrayList/ArrayList.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/ss9_bai_tap_ArrayList/ArrayList.java b/src/ss9_bai_tap_ArrayList/ArrayList.java
+new file mode 100644
+--- /dev/null	(date 1652806064258)
++++ b/src/ss9_bai_tap_ArrayList/ArrayList.java	(date 1652806064258)
+@@ -0,0 +1,110 @@
++package ss9_bai_tap_ArrayList;
++
++import java.util.Arrays;
++
++public class ArrayList <E> {
++    private int size = 0;
++    private static final int DEFAULT_CAPACITY = 10;
++    private Object[] elements;
++
++    public ArrayList() {
++        elements = new Object[DEFAULT_CAPACITY];
++    }
++
++    public ArrayList(int capacity) {
++        elements = new Object[capacity];
++    }
++
++    private void ensureCapa() {
++        if (size > elements.length) {
++            int newSize = elements.length * 2;
++            elements = Arrays.copyOf(elements, newSize);
++        }
++    }
++
++    public void add(Object x) {
++        size += 1;
++        ensureCapa();
++        elements[size-1] = x;
++    }
++
++    public boolean add(Object x, int index) {
++        if (index >= 0 && index <= size) {
++            size += 1;
++            ensureCapa();
++            for (int i = size - 2; i >= index; i--) {
++                elements[i + 1] = elements[i];
++            }
++            elements[index] = x;
++            return true;
++        }
++        return false;
++    }
++
++    public boolean remove(int index) {
++        if (index >= 0 && index < size) {
++            for (int i = index; i < size; i++) {
++                elements[i] = elements[i + 1];
++            }
++            size -= 1;
++            return true;
++        }
++        return false;
++    }
++
++    public int size() {
++        return size;
++    }
++
++    public ArrayList<E> clone() {
++        ArrayList<E> xx = new ArrayList<>(elements.length);
++        for (Object x : elements) {
++            xx.add(x);
++        }
++        return xx;
++    }
++
++    public boolean contains(Object e) {
++        for (Object x : elements) {
++            if (e.equals(x)) {
++                return true;
++            }
++        }
++        return false;
++    }
++
++    public int indexOf(Object x) {
++        for (int i = 0; i < size; i++) {
++            if (elements[i].equals(x)) {
++                return i;
++            }
++        }
++        return -1;
++    }
++
++    public boolean isEmpty(Object x) {
++        for (int i = 0; i < size; i++) {
++            if (elements[i].equals(x)) {
++                return true;
++            }
++        }return false;
++    }
++
++
++    public Object get(int index) {
++        if (index >= 0 && index < size) {
++            return (Object) elements[index];
++        }
++        return null;
++    }
++
++    public void clear() {
++        elements = (Object[]) new Object[DEFAULT_CAPACITY];
++        size = 0;
++    }
++
++    public Object[] getElements() {
++        return this.elements;
++    }
++
++}
+Index: src/ss9_bai_tap_ArrayList/MainArrayList.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/ss9_bai_tap_ArrayList/MainArrayList.java b/src/ss9_bai_tap_ArrayList/MainArrayList.java
+new file mode 100644
+--- /dev/null	(date 1652806230921)
++++ b/src/ss9_bai_tap_ArrayList/MainArrayList.java	(date 1652806230921)
+@@ -0,0 +1,42 @@
++package ss9_bai_tap_ArrayList;
++
++public class MainArrayList {
++    public static void main(String[] args) {
++        ArrayList<String> list = new ArrayList<String>();
++        list.add(" zakuza ");
++        list.add("giang ho");
++        list.add(" internet");
++        list.add("mafia");
++
++        print(list.getElements());
++
++        System.out.println(list.indexOf("Yes"));
++        System.out.println(list.indexOf("No"));
++
++        list.remove(1);
++        list.add("wifi", 1);
++        print(list.getElements());
++
++        ArrayList<String> clone = list.clone();
++
++        System.out.println(clone.contains("giang ho mom"));
++        System.out.println(clone.contains("handsome"));
++
++        System.out.println(clone.get(3));
++        System.out.println(clone.size());
++        clone.clear();
++        System.out.println(clone.size());
++        print(clone.getElements());
++
++
++    }
++
++    static void print(Object[] list) {
++        for (Object x : list) {
++            if (!(x == null)) {
++                System.out.println((String) x);
++            }
++        }
++        System.out.println("\n");
++    }
++}
+Index: src/ss9_bai_tap_link_list/MyLinkedList.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/ss9_bai_tap_link_list/MyLinkedList.java b/src/ss9_bai_tap_link_list/MyLinkedList.java
+new file mode 100644
+--- /dev/null	(date 1652806455044)
++++ b/src/ss9_bai_tap_link_list/MyLinkedList.java	(date 1652806455044)
+@@ -0,0 +1,177 @@
++package ss9_bai_tap_link_list;
++
++public class MyLinkedList<E> {
++    private Node head;
++    private int numNodes = 0;
++
++    private class Node {
++        private Node next;
++        private Object data;
++
++        public Node(Object element) {
++            this.data = element;
++        }
++
++        private Object getData() {
++            return this.data;
++        }
++    }
++
++    public MyLinkedList() {
++    }
++
++    // thêm phần tử tại vị trí đầu
++    public void addFirst(E element) {
++        Node temp = head;
++        head = new Node(element);
++        head.next = temp;
++        numNodes++;
++    }
++
++    // thêm phần tử vào cuối
++    public void addLast(E element) {
++        Node temp = head;
++
++        while (temp.next != null) {
++            temp = temp.next;
++        }
++        temp.next = new Node(element);
++        numNodes++;
++    }
++
++    // thêm phần tử vào vị trí index
++    public void add(int index, E element) {
++        Node temp = head;
++
++        Node holder;
++        for (int i = 0; i < index - 1 && temp.next != null; i++) {
++            temp = temp.next;
++        }
++        holder = temp.next;
++        temp.next = new Node(element);
++        temp.next.next = holder;
++        numNodes++;
++    }
++
++    //lấy gái trị index
++    public Object get(int index) {
++        Node temp = head;
++        for (int i = 0; i < index; i++) {
++            temp = temp.next;
++        }
++        return temp.data;
++    }
++
++    // kích thước
++    public int size() {
++        return numNodes;
++    }
++
++    // xóa phần tử tại vị trí index
++    public E remove(int index) {
++        if (index < 0 || index > numNodes) {
++            throw new IllegalArgumentException("Index: " + index);
++        }
++        Node temp = head;
++
++        Object data;
++
++        if (index == 0) {
++            data = temp.data;
++            head = head.next;
++            numNodes--;
++        } else {
++            for (int i = 0; i < index - 1 && temp.next != null; i++) {
++                temp = temp.next;
++            }
++            data = temp.next.data;
++            temp.next = temp.next.next;
++            numNodes--;
++        }
++        return (E) data;
++    }
++
++    // xóa 1 phần tử
++    public boolean remove(E element) {
++        if (head.data.equals(element)) {
++            remove(0);
++            return true;
++        } else {
++            Node temp = head;
++            while (temp.next != null) {
++                if (temp.next.data.equals(element)) {
++                    temp.next = temp.next.next;
++                    numNodes--;
++                    return true;
++                }
++                temp = temp.next;
++            }
++        }
++        return false;
++    }
++
++    // sao chép Linkedlist
++    public MyLinkedList<E> clone() {
++        if (numNodes == 0) {
++            throw new NullPointerException("Linkedlist is null");
++        }
++        MyLinkedList<E> myCloneLinkedList = new MyLinkedList<>();
++        Node temp = head;
++        myCloneLinkedList.addFirst((E) temp.data);
++        temp = temp.next;
++        while (temp != null) {
++            myCloneLinkedList.addLast((E) temp.data);
++            temp = temp.next;
++        }
++        return myCloneLinkedList;
++    }
++
++    // kiểm tra tồn tại
++    public boolean contains(E element) {
++        Node temp = head;
++        while (temp.next != null) {
++            if (temp.data.equals(element)) {
++                return true;
++            }
++            temp = temp.next;
++        }
++        return false;
++    }
++
++    // trả về vị trí muốn tìm
++    public int indexOf(E element) {
++        Node temp = head;
++        for (int i = 0; i < numNodes; i++) {
++            if (temp.getData().equals(element)) {
++                return i;
++            }
++        }
++        return -1;
++    }
++
++    // trả về phần tử đầu
++    public E getFirst() {
++        Node temp = head;
++        return (E) temp.data;
++    }
++
++
++    //Trả về phần tử ở vị trí cuối cùng
++    public E getLast() {
++        Node temp = head;
++        while (temp.next != null) {
++            temp = temp.next;
++        }
++        return (E) temp.data;
++    }
++
++    // xóa all
++    public void clear() {
++        Node temp = head;
++        while (temp.next != null) {
++            temp.data = null;
++            temp = temp.next;
++        }
++        numNodes = 0;
++    }
++}
+\ No newline at end of file
+Index: src/ss9_bai_tap_link_list/MainMyLinkedList.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/ss9_bai_tap_link_list/MainMyLinkedList.java b/src/ss9_bai_tap_link_list/MainMyLinkedList.java
+new file mode 100644
+--- /dev/null	(date 1652806544898)
++++ b/src/ss9_bai_tap_link_list/MainMyLinkedList.java	(date 1652806544898)
+@@ -0,0 +1,33 @@
++package ss9_bai_tap_link_list;
++
++public class MainMyLinkedList<E> {
++    public static void main(String[] args) {
++        MyLinkedList<Integer> myLinkedList = new MyLinkedList<>();
++        myLinkedList.addFirst(3);
++        myLinkedList.addFirst(2);
++        myLinkedList.addFirst(1);
++        for (int i = 0; i < myLinkedList.size(); i++) {
++            System.out.println(myLinkedList.get(i));
++        }
++        System.out.println(".............");
++        System.out.println((myLinkedList.size()));
++        System.out.println(".............");
++        myLinkedList.remove(1);
++        for (int i = 0; i < myLinkedList.size(); i++) {
++            System.out.println(myLinkedList.get(i));
++        }
++        System.out.println(".............");
++        myLinkedList.clone();
++        for (int i = 0; i < myLinkedList.size(); i++) {
++            System.out.println(myLinkedList.get(i));
++        }
++        System.out.println("First: " + myLinkedList.getFirst());
++        System.out.println("Last: " + myLinkedList.getLast());
++
++        myLinkedList.clear();
++        for (int i = 0; i < myLinkedList.size(); i++) {
++            System.out.println(myLinkedList.get(i));
++        }
++
++    }
++}
+\ No newline at end of file
+Index: .idea/.gitignore
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/.gitignore b/.idea/.gitignore
+new file mode 100644
+--- /dev/null	(date 1652688948037)
++++ b/.idea/.gitignore	(date 1652688948037)
+@@ -0,0 +1,8 @@
++# Default ignored files
++/shelf/
++/workspace.xml
++# Datasource local storage ignored files
++/dataSources/
++/dataSources.local.xml
++# Editor-based HTTP Client requests
++/httpRequests/
+Index: src/ss8_thuc_hanh/Calculator.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/ss8_thuc_hanh/Calculator.java b/src/ss8_thuc_hanh/Calculator.java
+new file mode 100644
+--- /dev/null	(date 1652675737248)
++++ b/src/ss8_thuc_hanh/Calculator.java	(date 1652675737248)
+@@ -0,0 +1,26 @@
++package ss8_thuc_hanh;
++
++public class Calculator {
++    public static final char ADDITION = '+';
++    public static final char SUBTRACTION = '-';
++    public static final char MULTIPLICATION = '*';
++    public static final char DIVISION = '/';
++
++    public static int calculate(int firstOperand, int secondOperand, char operator) {
++        switch (operator) {
++            case ADDITION:
++                return firstOperand + secondOperand;
++            case SUBTRACTION:
++                return firstOperand - secondOperand;
++            case MULTIPLICATION:
++                return firstOperand * secondOperand;
++            case DIVISION:
++                if (secondOperand != 0)
++                    return firstOperand / secondOperand;
++                else
++                    throw new RuntimeException("Can not divide by 0");
++            default:
++                throw new RuntimeException("Unsupported operation");
++        }
++    }
++}
+Index: src/ss8_thuc_hanh/CalculatorTest.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/ss8_thuc_hanh/CalculatorTest.java b/src/ss8_thuc_hanh/CalculatorTest.java
+new file mode 100644
+--- /dev/null	(date 1652676569147)
++++ b/src/ss8_thuc_hanh/CalculatorTest.java	(date 1652676569147)
+@@ -0,0 +1,24 @@
++package ss8_thuc_hanh;
++
++public class CalculatorTest {
++
++        public static int calculate ( int firstOperand, int secondOperand, char operator){
++            {
++                switch (operator) {
++                    case '+':
++                        return firstOperand + secondOperand;
++                    case '-':
++                        return firstOperand - secondOperand;
++                    case '*':
++                        return firstOperand * secondOperand;
++                    case '/':
++                        if (secondOperand != 0)
++                            return firstOperand / secondOperand;
++                        else
++                            throw new RuntimeException("Can not divide by 0");
++                    default:
++                        throw new RuntimeException("Unsupported operation");
++                }
++            }
++        }
++    }
+Index: src/ss9_thuc_hanh_MyList/java/MyList.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/ss9_thuc_hanh_MyList/java/MyList.java b/src/ss9_thuc_hanh_MyList/java/MyList.java
+new file mode 100644
+--- /dev/null	(date 1652806678911)
++++ b/src/ss9_thuc_hanh_MyList/java/MyList.java	(date 1652806678911)
+@@ -0,0 +1,50 @@
++package ss9_thuc_hanh_MyList.java;
++
++import java.util.Arrays;
++
++public class MyList<E> {
++    private int size = 0;
++    private static final int DEFAULT_CAPACITY = 10;
++    private Object elements[];
++
++    public MyList() {
++        elements = new Object[DEFAULT_CAPACITY];
++    }
++
++    private void ensureCapa() {
++        int newSize = elements.length * 2;
++        elements = Arrays.copyOf(elements, newSize);
++    }
++
++    public void add(Object e) {
++        if (size == elements.length) {
++            ensureCapa();
++        }
++        elements[size++] = e;
++    }
++
++    public Object get(int i) {
++        if (i >= size || i < 0) {
++            throw new IndexOutOfBoundsException("Index: " + i + ", Size " + i);
++        }
++        return (Object) elements[i];
++    }
++
++    public static void main(String[] args) {
++        MyList<Integer> listInteger = new MyList<Integer>();
++        listInteger.add(1);
++        listInteger.add(2);
++        listInteger.add(3);
++        listInteger.add(3);
++        listInteger.add(4);
++
++        System.out.println("element 4: " + listInteger.get(4));
++        System.out.println("element 1: " + listInteger.get(1));
++        System.out.println("element 2: " + listInteger.get(2));
++
++        listInteger.get(6);
++        System.out.println("element 6: "+listInteger.get(6));
++        listInteger.get(-1);
++        System.out.println("element -1: " + listInteger.get(-1));
++    }
++}
+Index: src/ss9_thuc_hanh_MyList/java/MyLinkedList.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/ss9_thuc_hanh_MyList/java/MyLinkedList.java b/src/ss9_thuc_hanh_MyList/java/MyLinkedList.java
+new file mode 100644
+--- /dev/null	(date 1652806750199)
++++ b/src/ss9_thuc_hanh_MyList/java/MyLinkedList.java	(date 1652806750199)
+@@ -0,0 +1,71 @@
++package ss9_thuc_hanh_MyList.java;
++
++public class MyLinkedList {
++    private Node head;
++    private int numNodes;
++
++    public MyLinkedList(Object data) {
++        head = new Node(data);
++    }
++
++    public void add(int index, Object data) {
++        Node temp = head;
++        Node holder;
++
++        for (int i = 0; i < index - 1 && temp.next != null; i++) {
++            temp = temp.next;
++        }
++        holder = temp.next;
++        temp.next = new Node(data);
++        temp.next.next = holder;
++        numNodes++;
++    }
++
++    public void addFirst(Object data) {
++        Node temp = head;
++        head = new Node(data);
++        head.next = temp;
++        numNodes++;
++    }
++
++    public Node get(int index) {
++        Node temp = head;
++        for (int i = 0; i < index; i++) {
++            temp = temp.next;
++        }
++        return temp;
++    }
++
++    public void printList() {
++        Node temp = head;
++        while (temp != null) {
++            System.out.println(temp.data);
++            temp = temp.next;
++        }
++    }
++
++    private class Node {
++        private Node next;
++        private final Object data;
++
++        public Node(Object data) {
++            this.data = data;
++        }
++
++        public Object getData() {
++            return this.data;
++        }
++    }
++
++    public static void main(String[] args) {
++        System.out.println("/=/=/=/= TESTING /=/=/=/=");
++        MyLinkedList ll = new MyLinkedList(10);
++        ll.addFirst(11);
++        ll.addFirst(12);
++        ll.addFirst(13);
++
++        ll.add(4,9);
++        ll.add(4,9);
++        ll.printList();
++    }
++}
+\ No newline at end of file
+Index: src/vong_lap_for/B.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/vong_lap_for/B.java b/src/vong_lap_for/B.java
+new file mode 100644
+--- /dev/null	(date 1652754279646)
++++ b/src/vong_lap_for/B.java	(date 1652754279646)
+@@ -0,0 +1,11 @@
++package vong_lap_for;
++
++public class B {
++    public static void main(String[] args) {
++        for (int i = 0; i <100 ; i++) {
++            if (i%2==0){
++                System.out.println(i);
++            }
++        }
++    }
++}
+Index: src/vong_lap_for/C.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/vong_lap_for/C.java b/src/vong_lap_for/C.java
+new file mode 100644
+--- /dev/null	(date 1652762854648)
++++ b/src/vong_lap_for/C.java	(date 1652762854648)
+@@ -0,0 +1,11 @@
++package vong_lap_for;
++
++public class C {
++    public static void main(String[] args) {
++        for (int i = 0; i < 100; i++) {
++            if (i % 3 == 0) {
++                System.out.println(i);
++            }
++        }
++    }
++}
+Index: src/vong_lap_for/D.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/vong_lap_for/D.java b/src/vong_lap_for/D.java
+new file mode 100644
+--- /dev/null	(date 1652754886067)
++++ b/src/vong_lap_for/D.java	(date 1652754886067)
+@@ -0,0 +1,15 @@
++package vong_lap_for;
++
++public class D {
++    public static void main(String[] args) {
++        int count = 0;
++        for (int i = 0; count <=100  ; i++) {
++            if (i % 3 == 0) {
++                System.out.println(i);
++                count++;
++            }
++        }
++
++    }
++}
++
+Index: src/vong_lap_for/E.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/vong_lap_for/E.java b/src/vong_lap_for/E.java
+new file mode 100644
+--- /dev/null	(date 1652756339404)
++++ b/src/vong_lap_for/E.java	(date 1652756339404)
+@@ -0,0 +1,19 @@
++package vong_lap_for;
++
++import java.util.Scanner;
++
++public class E {
++    public static void main(String[] args) {
++        Scanner scanner = new Scanner(System.in);
++        System.out.println("nhap chieu rong");
++        double rong = scanner.nextDouble();
++        System.out.println("nhap chieu dai");
++        double dai = scanner.nextDouble();
++        for (int i = 1; i <= rong; i++) {
++            for (int j = 1; j <= dai; j++) {
++
++                System.out.print("*");
++            }System.out.println("  ");
++        }
++    }
++}
+\ No newline at end of file
+Index: src/vong_lap_for/A.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/vong_lap_for/A.java b/src/vong_lap_for/A.java
+new file mode 100644
+--- /dev/null	(date 1652754279641)
++++ b/src/vong_lap_for/A.java	(date 1652754279641)
+@@ -0,0 +1,9 @@
++package vong_lap_for;
++
++public class A {
++    public static void main(String[] args) {
++        for (int i = 0; i <=100; i++) {
++            System.out.println(i);
++        }
++    }
++}
+Index: src/vong_lap_for/F.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/vong_lap_for/F.java b/src/vong_lap_for/F.java
+new file mode 100644
+--- /dev/null	(date 1652762954282)
++++ b/src/vong_lap_for/F.java	(date 1652762954282)
+@@ -0,0 +1,27 @@
++package vong_lap_for;
++
++import java.util.Scanner;
++
++public class F {
++    public static void main(String[] args) {
++        Scanner scanner = new Scanner(System.in);
++        System.out.println("nhap chieu rong");
++        double rong = scanner.nextDouble();
++        System.out.println("nhap chieu dai");
++        double dai = scanner.nextDouble();
++        for (int i = 1; i <= dai; i++) {
++            for (int j = 1; j <= rong; j++) {
++                if (i == 1 || i == dai || j == 1 || j == rong) {
++                    System.out.print(" *");
++                }
++                else {
++                    System.out.print("  ");
++                }
++
++            }System.out.println("");
++
++        }
++
++
++    }
++}
+\ No newline at end of file
+Index: src/CRUD/Main.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/CRUD/Main.java b/src/CRUD/Main.java
+new file mode 100644
+--- /dev/null	(date 1652839586640)
++++ b/src/CRUD/Main.java	(date 1652839586640)
+@@ -0,0 +1,43 @@
++package CRUD;
++
++import java.util.Scanner;
++
++public class Main {
++
++        public static void main(String[] args) {
++            OfficeStaffManager officeStaffManager = new OfficeStaffManager();
++            boolean flag = true;
++            int choice;
++            do {
++                System.out.println("1. Add");
++                System.out.println("2. Display");
++                System.out.println("3. Edit");
++                System.out.println("4. Delete");
++                System.out.println("5. Search");
++                System.out.print("Your choice: ");
++                choice = (Integer.parseInt((new Scanner(System.in)).nextLine()));
++                switch (choice) {
++                    case 1:
++                        officeStaffManager.add();
++                        break;
++                    case 2:
++                        officeStaffManager.display();
++                        break;
++                    case 3:
++                        officeStaffManager.edit();
++                        break;
++                    case 4:
++                        officeStaffManager.delete();
++                        break;
++                    case 5:
++                        officeStaffManager.search();
++                        break;
++                    default:
++                        flag = false;
++                        break;
++                }
++            }
++            while (flag);
++        }
++    }
++
+Index: src/CRUD/OfficeStaff.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/CRUD/OfficeStaff.java b/src/CRUD/OfficeStaff.java
+new file mode 100644
+--- /dev/null	(date 1652840147061)
++++ b/src/CRUD/OfficeStaff.java	(date 1652840147061)
+@@ -0,0 +1,71 @@
++package CRUD;
++
++import java.text.NumberFormat;
++import java.util.Locale;
++import java.util.Scanner;
++
++public class OfficeStaff extends Staff {
++    private int timeForWork;
++    private int dayOfAbsent;
++    private int dayForWork;
++
++    public OfficeStaff() {}
++
++
++        public int getTimeForWork() {
++            return timeForWork;
++        }
++
++        public void setTimeForWork(int timeForWork) {
++            this.timeForWork = timeForWork;
++        }
++
++        public int getDayOfAbsent() {
++            return dayOfAbsent;
++        }
++
++        public void setDayOfAbsent(int dayOfAbsent) {
++            this.dayOfAbsent = dayOfAbsent;
++        }
++
++        public int getDayForWork() {
++            return dayForWork;
++        }
++
++        public void setDayForWork(int dayForWork) {
++            this.dayForWork = dayForWork;
++        }
++
++        public int originalIncome() {
++            return this.timeForWork * super.getSalary() * this.dayForWork;
++        }
++
++        public int totalIncome(int soNgayNghi) {
++            return this.originalIncome() - (soNgayNghi * this.timeForWork * super.getSalary());
++        }
++
++        @Override
++        public void input() {
++            super.input();
++            System.out.print("Enter time for work (hour): ");
++            this.timeForWork = Integer.parseInt((new Scanner(System.in).nextLine()));
++            System.out.print("Enter day of Absent: ");
++            this.dayOfAbsent = Integer.parseInt((new Scanner(System.in).nextLine()));
++            System.out.print("Enter day for work: ");
++            this.dayForWork = Integer.parseInt((new Scanner(System.in).nextLine()));
++        }
++
++        @Override
++        public String output() {
++            Locale lc = new Locale("vi", "VN");
++            NumberFormat nf = NumberFormat.getInstance(lc);
++            return "--------------\n" +
++                    super.output() +
++                    "Time for work: " + this.timeForWork + "\n" +
++                    "Day for work: " + this.dayForWork + "\n" +
++                    "Day of Absent: " + this.dayOfAbsent + "\n" +
++                    "Original income: " + nf.format(this.originalIncome()) + "\n" +
++                    "Total income: " + nf.format(this.totalIncome(this.dayOfAbsent)) + "\n";
++        }
++
++}
+Index: src/vong_lap_for/G.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/vong_lap_for/G.java b/src/vong_lap_for/G.java
+new file mode 100644
+--- /dev/null	(date 1652758638641)
++++ b/src/vong_lap_for/G.java	(date 1652758638641)
+@@ -0,0 +1,26 @@
++package vong_lap_for;
++
++import java.util.Scanner;
++
++public class G {
++    public static void main(String[] args) {
++        Scanner scanner = new Scanner(System.in);
++        System.out.println("nhap chieu dai");
++        double dai = scanner.nextDouble();
++        System.out.println("nhap chieu rong");
++        double rong = scanner.nextDouble();
++        for (int i = 1; i <= dai; i++) {
++            for (int j = 1; j <= rong; j++) {
++                if (i == 1 || i == dai || j == rong) {
++                    System.out.print("*");
++                }
++                else {
++                    System.out.print(" ");
++                }
++
++            }System.out.println("");
++
++        }
++            }
++        }
++
+Index: src/vong_lap_for/AA.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/vong_lap_for/AA.java b/src/vong_lap_for/AA.java
+new file mode 100644
+--- /dev/null	(date 1652808765397)
++++ b/src/vong_lap_for/AA.java	(date 1652808765397)
+@@ -0,0 +1,58 @@
++package vong_lap_for;
++
++import java.util.Scanner;
++
++public class AA {
++    public static void main(String[] args) {
++        Scanner scanner = new Scanner(System.in);
++        int chieucao;
++        System.out.println("nhap chieu cao");
++        chieucao = scanner.nextInt();
++//       for (int i = 0; i < chieucao; i++) {
++//           for (int j = 0; j <=i ; j++) {
++//               System.out.print("*");
++//           }
++//            System.out.println("");
++//       }
++//        System.out.println("\n----------------------------------");
++
++
++
++
++//        for (int i = 0; i <= chieucao; i++) {
++//            for (int j = chieucao; j >= i; j--) {
++//                System.out.print("*");
++//            }
++//            System.out.print("\n");
++//        }
++//
++
++
++
++//        for (int i = chieucao; i >= 0; i--) {
++//            for (int j = chieucao-i; j > 0; j--) {
++//                System.out.print(" ");
++//            }
++//            for (int j = i; j > 0; j--) {
++//                System.out.print("*");
++//            }
++//            System.out.println();
++//
++//        }
++//
++//    }
++//}
++        for (int i = 0; i < chieucao ; i++) {
++            for (int j = 0; j < i; j++) {
++                System.out.print(" ");
++            }
++            for (int j = i; j < chieucao; j++) {
++                System.out.print("*");
++            }
++            System.out.println("");
++        }
++
++
++
++    }
++}
+\ No newline at end of file
+Index: src/CRUD/OfficeStaffManager.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/CRUD/OfficeStaffManager.java b/src/CRUD/OfficeStaffManager.java
+new file mode 100644
+--- /dev/null	(date 1652839586650)
++++ b/src/CRUD/OfficeStaffManager.java	(date 1652839586650)
+@@ -0,0 +1,98 @@
++package CRUD;
++
++import java.util.Scanner;
++
++public class OfficeStaffManager {
++    OfficeStaff[] officeStaffs = new OfficeStaff[100];
++    {
++        OfficeStaff officeStaff = new OfficeStaff();
++    }
++
++    public void add() {
++        OfficeStaff officeStaff = new OfficeStaff();
++        officeStaff.input();
++
++        for (int i = 0; i < officeStaffs.length; i++) {
++            if (officeStaffs[i] == null) {
++                officeStaff.setId(i);
++                officeStaffs[i] = officeStaff;
++                break;
++            }
++        }
++    }
++
++    public void display() {
++        for (int i = 0; i < officeStaffs.length; i++) {
++            if (officeStaffs[i] != null) {
++                System.out.println(officeStaffs[i].output());
++            } else {
++                continue;
++            }
++        }
++    }
++
++    public void edit() {
++        boolean flag = false;
++        System.out.print("Enter id element for edit: ");
++        int id = Integer.parseInt((new Scanner(System.in).nextLine()));
++        for (int i = 0; i < officeStaffs.length; i++) {
++            if (officeStaffs[i] != null && officeStaffs[i].getId() == id) {
++                officeStaffs[i].input();
++                flag = true;
++                break;
++            }
++        }
++        if (!flag) {
++            System.out.println("ID " + id + " not found!");
++        }
++    }
++
++    public void delete() {
++        System.out.print("Enter id element for edit: ");
++        int id = Integer.parseInt((new Scanner(System.in).nextLine()));
++
++        for (int i = 0; i < officeStaffs.length - 1; i++) {
++            if (officeStaffs[i] != null) {
++                if(officeStaffs[i].getId() == id) {
++                    officeStaffs[i] = null;
++                    return;
++                }
++            }
++        }
++    }
++
++    public void search() {
++        boolean flag = false;
++        System.out.print("Enter name for search: ");
++        String nameSearch = (new Scanner(System.in)).nextLine();
++        OfficeStaff[] os = new OfficeStaff[100];
++
++        for (int i = 0; i < officeStaffs.length; i++) {
++            if (officeStaffs[i] != null) {
++                if (officeStaffs[i].getName().equalsIgnoreCase(nameSearch)) {
++                    flag = true;
++                    break;
++                }
++            }
++        }
++
++        if (flag) {
++            for (int i = 0; i < officeStaffs.length; i++) {
++                if (officeStaffs[i] != null) {
++                    if (officeStaffs[i].getName().equalsIgnoreCase(nameSearch)) {
++                        if (os[i] == null) {
++                            os[i] = officeStaffs[i];
++                        }
++                    }
++                }
++            }
++            for (int i = 0; i < os.length; i++) {
++                if (os[i] != null) {
++                    System.out.println(os[i].output());
++                }
++            }
++        } else {
++            System.out.println(nameSearch + " not found!");
++        }
++    }
++}
+Index: src/CRUD/Person.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/CRUD/Person.java b/src/CRUD/Person.java
+new file mode 100644
+--- /dev/null	(date 1652839205368)
++++ b/src/CRUD/Person.java	(date 1652839205368)
+@@ -0,0 +1,36 @@
++package CRUD;
++
++import java.util.Scanner;
++
++public class Person {
++    private String name;
++    private int age;
++
++    public String getName() {
++        return name;
++    }
++
++    public void setName(String name) {
++        this.name = name;
++    }
++
++    public int getAge() {
++        return age;
++    }
++
++    public void setAge(int age) {
++        this.age = age;
++    }
++
++    public void input() {
++        System.out.print("Enter name: ");
++        this.name = (new Scanner(System.in)).nextLine();
++        System.out.print("Enter age: ");
++        this.age = Integer.parseInt((new Scanner(System.in)).nextLine());
++    }
++
++    public String output() {
++        return "Name: " + this.name + "\n" +
++                "Age: " + this.age + "\n";
++    }
++}
+Index: src/CRUD/Staff.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/CRUD/Staff.java b/src/CRUD/Staff.java
+new file mode 100644
+--- /dev/null	(date 1652839933735)
++++ b/src/CRUD/Staff.java	(date 1652839933735)
+@@ -0,0 +1,53 @@
++package CRUD;
++import java.text.NumberFormat;
++import java.util.Locale;
++import java.util.Scanner;
++
++public class Staff extends Person {
++    private int id;
++    private int salary;
++    private String job;
++
++    public int getId() {
++        return id;
++    }
++
++    public void setId(int id) {
++        this.id = id;
++    }
++
++    public int getSalary() {
++        return salary;
++    }
++
++    public void setSalary(int salary) {
++        this.salary = salary;
++    }
++
++    public String getJob() {
++        return job;
++    }
++
++    public void setJob(String job) {
++        this.job = job;
++    }
++
++    @Override
++    public void input() {
++        super.input();
++        System.out.print("Enter salary: ");
++        this.salary = Integer.parseInt((new Scanner(System.in)).nextLine());
++        System.out.print("Enter job: ");
++        this.job = (new Scanner(System.in)).nextLine();
++    }
++
++    @Override
++    public String output() {
++        Locale lc = new Locale("vi", "VN");
++        NumberFormat nf = NumberFormat.getInstance(lc);
++        return "ID: " + this.id + "\n" +
++                super.output() +
++                "Salary: " + nf.format(this.salary) + "\n" +
++                "Job: " + this.job + "\n";
++    }
++}
+\ No newline at end of file

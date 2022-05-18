@@ -1,24 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f255574f-0166-468f-8711-379711e5d3d7" name="Changes" comment="git commit-m &quot;up bai tap&quot;">
-      <change afterPath="$PROJECT_DIR$/src/interface_colorable/Colorable.java" afterDir="false" />
+    <list default="true" id="75f096c9-7898-48ee-8089-4eae20be378e" name="Changes" comment="git commit-m &quot;up bai tap&quot;">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/C0322G1_nguyenhuythao_module2/ss6_thuc_hanh/Circle.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/C0322G1_nguyenhuythao_module2/ss6_thuc_hanh/CircleText.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/C0322G1_nguyenhuythao_module2/ss6_thuc_hanh/CircleText.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/C0322G1_nguyenhuythao_module2/ss6_thuc_hanh/Rectangle.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/C0322G1_nguyenhuythao_module2/ss6_thuc_hanh/RectangleTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/C0322G1_nguyenhuythao_module2/ss6_thuc_hanh/RectangleTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/C0322G1_nguyenhuythao_module2/ss6_thuc_hanh/Shape.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/C0322G1_nguyenhuythao_module2/ss6_thuc_hanh/ShapeTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/C0322G1_nguyenhuythao_module2/ss6_thuc_hanh/Square.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/C0322G1_nguyenhuythao_module2/ss6_thuc_hanh/SquareTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/C0322G1_nguyenhuythao_module2/ss6_thuc_hanh/SquareTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/C0322G1_nguyenhuythao_module2/ss7_thuc_hanh/Rectangle.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/C0322G1_nguyenhuythao_module2/ss7_thuc_hanh/Rectangle.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/C0322G1_nguyenhuythao_module2/ss7_thuc_hanh/Shape.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/C0322G1_nguyenhuythao_module2/ss7_thuc_hanh/Shape.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/C0322G1_nguyenhuythao_module2/ss7_thuc_hanh/Square.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/C0322G1_nguyenhuythao_module2/ss7_thuc_hanh/Square.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/interface_colorable/MainColorable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/interface_colorable/MainColorable.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/interface_colorable/Shape.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/interface_colorable/Shape.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/interface_colorable/Square.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/interface_colorable/Square.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ss6_thuc_hanh/ShapeTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ss6_thuc_hanh/ShapeTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,6 +28,9 @@
       <filtered-out-file-type name="TAG" />
       <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
     </file-type-list>
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/src/interface_colorable/Shape.java" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="ProjectId" id="2901r3YkZoonYpgedZZRRw0vrVP" />
   <component name="ProjectViewState">
@@ -174,7 +161,14 @@
       <option name="project" value="LOCAL" />
       <updated>1652664667744</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="git commit-m &quot;up bai tap&quot;">
+      <created>1652864257542</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1652864257542</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
