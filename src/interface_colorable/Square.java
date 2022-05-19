@@ -1,6 +1,6 @@
 package interface_colorable;
 
-public class Square extends Rectangle implements Colorable {
+public class Square extends Rectangle   {
     public Square() {
     }
 
