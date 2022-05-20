@@ -2,30 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9eddadff-b503-463b-a010-d17ac1cb6b91" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/CRUD/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/CRUD/OfficeStaff.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/CRUD/OfficeStaffManager.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/CRUD/Person.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/CRUD/Staff.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Java/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Java/eimi_kukada.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/MangDep.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ss10_bai_tap/DecimalToBinary.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ss10_bai_tap/InvertElement.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ss10_bai_tap/Palindrome.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ss10_bai_tapcount_of_charactor/CountOfCharactor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ss10_thuc_hanh/MyGenericStack.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ProductManagement/IProductService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ProductManagement/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ProductManagement/Product.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ProductManagement/ProductService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ss11_thuc_hanh/BinarySearch.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ss11_thuc_hanh/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ss11_thuc_hanh/findTheAscending.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/C0322G1_nguyenhuythao_module2/ss6_thuc_hanh/SquareTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/C0322G1_nguyenhuythao_module2/ss7_thuc_hanh/Circle.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/C0322G1_nguyenhuythao_module2/ss7_thuc_hanh/CircleTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/C0322G1_nguyenhuythao_module2/ss7_thuc_hanh/Rectangle.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/C0322G1_nguyenhuythao_module2/ss7_thuc_hanh/RectangleTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/C0322G1_nguyenhuythao_module2/ss7_thuc_hanh/Shape.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/C0322G1_nguyenhuythao_module2/ss7_thuc_hanh/ShapeTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/C0322G1_nguyenhuythao_module2/ss7_thuc_hanh/Square.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/C0322G1_nguyenhuythao_module2/ss7_thuc_hanh/SquareTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/interface_colorable/Square.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/interface_colorable/Square.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/C0322G1_nguyenhuythao_module2/interface_colorable/Shape.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/C0322G1_nguyenhuythao_module2/interface_colorable/Shape.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/interface_colorable/MainColorable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/interface_colorable/MainColorable.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/interface_colorable/Rectangle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/interface_colorable/Rectangle.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/interface_colorable/Shape.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/interface_colorable/Shape.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,13 +41,13 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
   </component>
-  <component name="RunManager" selected="Application.Palindrome">
-    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="CRUD.Main" />
+  <component name="RunManager" selected="Application.Main">
+    <configuration name="BinarySearch" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ss11_thuc_hanh.BinarySearch" />
       <module name="C0322G1_nguyenhuythao_module2" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="CRUD.*" />
+          <option name="PATTERN" value="ss11_thuc_hanh.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -67,8 +55,21 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Palindrome" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="ss10_bai_tap.Palindrome" />
+    <configuration name="CountOfCharactor" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ss10_bai_tapcount_of_charactor.CountOfCharactor" />
+      <module name="C0322G1_nguyenhuythao_module2" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ss10_bai_tapcount_of_charactor.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="DecimalToBinary" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ss10_bai_tap.DecimalToBinary" />
       <module name="C0322G1_nguyenhuythao_module2" />
       <extension name="coverage">
         <pattern>
@@ -80,10 +81,39 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ProductManagement.Main" />
+      <module name="C0322G1_nguyenhuythao_module2" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ProductManagement.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MainColorable" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="interface_colorable.MainColorable" />
+      <module name="C0322G1_nguyenhuythao_module2" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="interface_colorable.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Palindrome" />
         <item itemvalue="Application.Main" />
+        <item itemvalue="Application.BinarySearch" />
+        <item itemvalue="Application.DecimalToBinary" />
+        <item itemvalue="Application.MainColorable" />
+        <item itemvalue="Application.CountOfCharactor" />
       </list>
     </recent_temporary>
   </component>
@@ -97,6 +127,7 @@
       <updated>1652954463607</updated>
       <workItem from="1652954469750" duration="1874000" />
       <workItem from="1652978651941" duration="547000" />
+      <workItem from="1653009129587" duration="7401000" />
     </task>
     <servers />
   </component>
@@ -114,5 +145,21 @@
       </map>
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/ProductManagement/ProductService.java</url>
+          <line>2</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/ss10_bai_tap/InvertElement.java</url>
+          <line>16</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
