@@ -1,6 +1,6 @@
 package interface_colorable;
 
-public abstract class Shape {
+public abstract class Shape implements Colorable{
         private String color = "green";
         private boolean filled = true;
 
